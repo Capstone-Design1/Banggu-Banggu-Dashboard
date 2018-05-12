@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- import jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<!-- import mapbox -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+
+	<!-- import css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/sidebar_main_wide.css">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id='map'></div>
+	<div id="sidebar_main_wide">
+		<div class="title">
+			<h1>서강스페이스</h1>
+			<h3>대시보드</h3>
+		</div>
+		<div>
+			<ul>
+				<li id="all">캠퍼스 전체</li>
+				<li id="J">J관</li>
+				<li id="RA">RA관</li>
+				<li id="R">R관</li>
+				<li id="K">K관</li>
+				<li id="D">D관</li>
+				<li id="M">M관</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- <div id="sidebar_main_narrow">
+		<div class="title">
+		</div>
+		<div>
+			<ul>
+				<li id="All">A</li>
+				<li id="J">J</li>
+				<li id="RA">RA</li>
+				<li id="R">R</li>
+				<li id="K">K</li>
+				<li id="D">D</li>
+				<li id="M">M</li>
+			</ul>
+		</div>
+	</div> -->
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
