@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 	mapboxgl.accessToken = 'pk.eyJ1IjoiaGV1bXNpIiwiYSI6ImNqYng3ZW0xYTJsZHQycXBhM2F1bm9yMXIifQ.kV_zhG36r5EIXXT__LzlCw';
 	var map = new mapboxgl.Map({
 		container: 'map',
@@ -24,6 +24,38 @@ $( document ).ready(function() {
 			}
         })
 	})
+    
+    map.on('click', 'J-building', function (e) {
+        var properties = e.features[0].properties;
+
+        
+        var description = 
+            "<p>평가 : <span class='"+ properties.evaluation + "'>" +
+                        properties.evaluation + "</span></p>" +
+            "<p>온도 : <span class='"+ properties.evaluation + "'>" +
+                        properties.temperature + " ℃</p>" +
+            "<p>습도 : <span class='"+ properties.evaluation + "'>" +
+                        properties.humidity + " %</p>" +
+            "<p>미세먼지 : <span class='"+ properties.evaluation + "'>" +
+                        properties.dust + " </p> " +
+            "<p>CO2 : <span class='"+ properties.evaluation + "'>" +
+                        properties.co2 + " ppm</p> ";
+        
+        new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(description)
+            .addTo(map);
+    });
+    
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'J-building', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+    
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
 
 	$("#all").on("click", function(){
 		map.flyTo({
@@ -38,4 +70,5 @@ $( document ).ready(function() {
 			zoom : 19.3
 		})
 	})
+    
 });

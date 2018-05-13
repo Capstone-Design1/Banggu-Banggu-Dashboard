@@ -18,11 +18,13 @@
 	<link rel="stylesheet" href="css/sidebar_floor.css">
 	<link rel="stylesheet" href="css/sidebar_rooms.css">
 	<link rel="stylesheet" href="css/sidebar_room_detail.css">
+	<link rel="stylesheet" href="css/search.css">
 	
     <!--import epoch-->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
+    
     
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -88,31 +90,10 @@
         
         <div id="sidebar_room_detail">
             <h5>J319</h5>
-<!--
-            <div id="realtime_value">
-                <h5>평가</h5>
-                <div id="evluation">
-                    <p id="state">좋음</p>
-                    <p id="rating">4.3/5</p>
-                </div>
-                <div id="temperature_value" class="value_box">
-                    <p>온도</p>
-                    <p>24.5 ℃</p>
-                </div>
-                <div id="humidity_value" class="value_box">
-                    <p>습도</p>
-                    <p>40%</p>
-                </div>
-                <div id="dust_value" class="value_box">
-                    <p>미세먼지</p>
-                    <p>2.5</p>
-                </div>
-                <div id="co2_value" class="value_box">
-                    <p>CO2</p>
-                    <p>780 ppm</p>
-                </div>
+            <div id="evaluation">
+                <p id="state">좋음</p>
+                <p id="rating">4.3/5</p>
             </div>
--->
             <div id="realtime_chart">
                 <div id="temperature_chart" class="chart_box">
                     <p class="value_name">온도</p>
@@ -177,6 +158,10 @@
             </div>
         </div>
 	</div>
+   
+    <form method="get" action="/search" id="search">
+        <input name="q" type="text" size="40" placeholder="Search..." />
+    </form>
 
 	<script src="./js/main.js"></script>
 </body>

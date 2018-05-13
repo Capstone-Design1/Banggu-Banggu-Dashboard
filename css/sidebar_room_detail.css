@@ -15,8 +15,8 @@ h5{
     grid-template-columns: 1fr 1fr;
 }
 
-#evluation{
-    padding: 10px 0;
+#evaluation{
+    padding: 5px 0;
 /*    background-color: rgba(127, 255, 0);*/
 /*    background-color: rgba(50, 205, 125);*/
     grid-column-start: 1;
@@ -53,5 +53,5 @@ h5{
 }
 
 .chart_box{
-    padding: 10px 0;
+    padding: 5px 0;
 }

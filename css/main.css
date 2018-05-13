@@ -36,7 +36,7 @@ div{
 
 #side_left{
     position: fixed;
-    width: 50%;
+    width: fit-content;
     height: 100%;
     top: 0;
     left: 0;
@@ -44,4 +44,25 @@ div{
     bottom: 0;
     z-index : 1;
     display: flex;
+}
+
+#side_right{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index : 2;
+}
+
+.good{
+    color: forestgreen;
+}
+
+.normal{
+    color: orange;
+}
+
+.bad{
+    color: red;
 }
