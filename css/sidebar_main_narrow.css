@@ -1,3 +1,32 @@
 #sidebar_main_narrow{
+	width: 80px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
 
+#sidebar_main_narrow > .title{
+    height: 120px;
+}
+
+#sidebar_main_narrow ul li{
+    margin: 0;
+	padding: 10px 0;
+	cursor: pointer;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+#sidebar_main_narrow ul li:hover{
+	background-color: #FE2E2E;
+	color: white;
+}
+
+#sidebar_main_narrow .title{
+	text-align: center;
+}
+
+#sidebar_main_narrow .title > h3{
+	color: #FE2E2E;
+	padding-bottom: 20px;
 }

@@ -14,12 +14,23 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/sidebar_main_wide.css">
+	<link rel="stylesheet" href="css/sidebar_main_narrow.css">
+	<link rel="stylesheet" href="css/sidebar_floor.css">
+	<link rel="stylesheet" href="css/sidebar_rooms.css">
+	<link rel="stylesheet" href="css/sidebar_room_detail.css">
+	
+    <!--import epoch-->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
+    
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 
 <body>
 	<div id='map'></div>
+<!--
 	<div id="sidebar_main_wide">
 		<div class="title">
 			<h1>서강스페이스</h1>
@@ -37,22 +48,135 @@
 			</ul>
 		</div>
 	</div>
+-->
+    <div id="side_left">
+        <div id="sidebar_main_narrow">
+            <div class="title">
+            </div>
+            <div>
+                <ul>
+                    <li id="All">All</li>
+                    <li id="J">J</li>
+                    <li id="RA">RA</li>
+                    <li id="R">R</li>
+                    <li id="K">K</li>
+                    <li id="D">D</li>
+                    <li id="M">M</li>
+                </ul>
+            </div>
+        </div>
 
-	<!-- <div id="sidebar_main_narrow">
-		<div class="title">
-		</div>
-		<div>
-			<ul>
-				<li id="All">A</li>
-				<li id="J">J</li>
-				<li id="RA">RA</li>
-				<li id="R">R</li>
-				<li id="K">K</li>
-				<li id="D">D</li>
-				<li id="M">M</li>
-			</ul>
-		</div>
-	</div> -->
+        <div id="sidebar_floor">
+            <ul>
+                <li>5</li>
+                <li>4</li>
+                <li>3</li>
+                <li>2</li>
+                <li>1</li>
+            </ul>
+        </div>
+        
+        <div id="sidebar_rooms">
+            <ul>
+                <li>J319</li>
+                <li>J318</li>
+                <li>J317</li>
+                <li>J316</li>
+                <li>J315</li>
+            </ul>
+        </div>
+        
+        <div id="sidebar_room_detail">
+            <h5>J319</h5>
+<!--
+            <div id="realtime_value">
+                <h5>평가</h5>
+                <div id="evluation">
+                    <p id="state">좋음</p>
+                    <p id="rating">4.3/5</p>
+                </div>
+                <div id="temperature_value" class="value_box">
+                    <p>온도</p>
+                    <p>24.5 ℃</p>
+                </div>
+                <div id="humidity_value" class="value_box">
+                    <p>습도</p>
+                    <p>40%</p>
+                </div>
+                <div id="dust_value" class="value_box">
+                    <p>미세먼지</p>
+                    <p>2.5</p>
+                </div>
+                <div id="co2_value" class="value_box">
+                    <p>CO2</p>
+                    <p>780 ppm</p>
+                </div>
+            </div>
+-->
+            <div id="realtime_chart">
+                <div id="temperature_chart" class="chart_box">
+                    <p class="value_name">온도</p>
+                    <div id="temperature" class="epoch category10" style="height: 100px;"></div>
+                    <script>
+                        var data = [
+                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
+                        ];
+                       var areaChartInstance2 = $('#temperature').epoch({
+                            type: 'area',
+                            data: data,
+                            axes: ['left', 'right', 'bottom']
+                        });
+                    </script>
+                </div>
+                
+                <div id="humidity_chart" class="chart_box">
+                    <p class="value_name">습도</p>
+                    <div id="humidity" class="epoch category10" style="height: 100px;"></div>
+                    <script>
+                        var data = [
+                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
+                        ];
+                       var areaChartInstance2 = $('#humidity').epoch({
+                            type: 'area',
+                            data: data,
+                            axes: ['left', 'right', 'bottom']
+                        });
+                    </script>
+                </div>
+                   
+                <div id="dust_chart" class="chart_box">
+                    <p class="value_name">미세먼지</p>
+                    <div id="dust" class="epoch category10" style="height: 100px;"></div>
+                    <script>
+                        var data = [
+                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
+                        ];
+                       var areaChartInstance2 = $('#dust').epoch({
+                            type: 'area',
+                            data: data,
+                            axes: ['left', 'right', 'bottom']
+                        });
+                    </script>
+                </div>
+                <div id="co2_chart" class="chart_box">
+                    <p class="value_name">CO2</p>
+                    <div id="co2" class="epoch category10" style="height: 100px;"></div>
+                    <script>
+                        var data = [
+                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
+                        ];
+                       var areaChartInstance = $('#co2').epoch({
+                            type: 'area',
+                            data: data,
+                            axes: ['left', 'right', 'bottom']
+                        });
+                    </script>
+                </div>
+                 
+                
+            </div>
+        </div>
+	</div>
 
 	<script src="./js/main.js"></script>
 </body>

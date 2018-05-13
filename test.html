@@ -1,0 +1,69 @@
+<html>
+<head>
+<!--
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="dist/js/epoch.min.js"></script>
+  <link rel="stylesheet" href="dist/css/epoch.min.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="dist/js/epoch.js"></script>
+        <link rel="stylesheet" type="text/css" href="dist/css/epoch.css">
+-->
+    <link rel="stylesheet" type="text/css" href="/css/tests.css">
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="../../../dist/js/epoch.js"></script>
+        <script src="../js/data.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../dist/css/epoch.css">
+
+<!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
+-->
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+           <!-- Test 1 -->
+        <div id="test-1" class="test">
+            <h2>1. Single Series</h2>
+            <p>It should display a plot of <code>y = cos(x) + 1</code> over the range <code>[0, 2&pi;)</code>.</p>
+            <div class="epoch"></div>
+        </div>
+
+        <script>
+        $(function() {
+            var data = [{ label: 'A', values: [] }],
+                length = 64;
+
+            for (var i = 0; i < length; i++) {
+                var x = i * 2 * Math.PI / length,
+                    y = Math.cos(x) + 1;
+                data[0].values.push({x: x, y: y});
+            }
+
+            $('#test-1 .epoch').epoch({ type: 'area', data: data });
+        });
+        </script>
+   
+<!--
+    <div id="area" class="epoch category10" style="height: 200px;"></div>
+    <script>
+        var data = [
+          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] },
+          { label: 'Layer 2', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 4} ] }
+        ];
+       var areaChartInstance = $('#area').epoch({
+            type: 'area',
+            data: data,
+            axes: ['left', 'right', 'bottom']
+        });
+    </script>
+-->
+</body>
+</html>
