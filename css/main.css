@@ -12,6 +12,10 @@
   src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
 	position: absolute;
 	width: 100%;
@@ -53,6 +57,18 @@ div{
     right: 0;
     bottom: 0;
     z-index : 2;
+}
+
+#legend{
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 10px 10px;
+}
+
+#legend > div{
+    width: 20px;
+    height: 20px;
 }
 
 .good{

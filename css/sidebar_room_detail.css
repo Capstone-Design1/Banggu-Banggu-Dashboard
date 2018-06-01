@@ -23,6 +23,7 @@ h5{
     grid-column-end: 3;
 /*    background-color: rgba(0, 255, 127, 0.5);*/
     text-align: center;
+    color: lawngreen
 }
 #state{}
 #rating{
