@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/epoch.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/epoch.min.css">
+
+    <script>
+        var nextTime = (function() {
+            var currentTime = parseInt(new Date().getTime() / 1000);
+            return function() {
+                return currentTime++;
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div class="epoch"></div>
+
+    <script>
+        $(function() {
+            var data = [{
+                label: 'A',
+                values: []
+            }];
+
+            var chart = $('.epoch').epoch({
+                type: 'time.area',
+                pixelRatio: 1,
+                axes: ['left', 'bottom'],
+                range: [0, 100],
+                width: 200,
+                height: 100,
+                data: data
+            });
+
+            var pushPoint = function() {
+                var y = Math.floor(Math.random() * 100) + 1,
+                    time = nextTime();
+                chart.push([{
+                    time: time,
+                    y: y
+                }]);
+            };
+
+            pushPoint();
+            interval = setInterval(pushPoint, 1000);
+        });
+    </script>
+</body>
+
+</html>

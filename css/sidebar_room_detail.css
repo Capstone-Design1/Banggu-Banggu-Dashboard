@@ -42,12 +42,11 @@ h5{
 .value_box p{
     padding: 5px;
 }
-/*
 
 #realtime_chart{
+    height: 150px;
     margin-top: 20px;
 }
-*/
 
 .value_name{
     padding: 10px;

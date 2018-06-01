@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
     
 <!--    custom-->
+
+	<script src="./js/data.js"></script>
 	<script src="./js/global.js"></script>
     
 	<meta charset="UTF-8">
@@ -91,73 +93,36 @@
         </div>
         
         <div id="sidebar_room_detail">
-            <h5>J319</h5>
+            <h5>Room-name</h5>
+            
             <div id="evaluation">
-                <p id="state">좋음</p>
-                <p id="rating">4.3/5</p>
+                <p id="state">환경 점수</p>
+                <p id="rating">evaluation</p>
             </div>
+            
             <div id="realtime_chart">
                 <div id="temperature_chart" class="chart_box">
                     <p class="value_name">온도</p>
-                    <div id="temperature" class="epoch category10" style="height: 100px;"></div>
-                    <script>
-                        var data = [
-                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
-                        ];
-                       var areaChartInstance2 = $('#temperature').epoch({
-                            type: 'area',
-                            data: data,
-                            axes: ['left', 'right', 'bottom']
-                        });
-                    </script>
+                    <iframe src="http://localhost:8000/test.html"></iframe>
                 </div>
-                
-                <div id="humidity_chart" class="chart_box">
+            </div>
+            <div id="realtime_chart">
+                <div id="temperature_chart" class="chart_box">
                     <p class="value_name">습도</p>
-                    <div id="humidity" class="epoch category10" style="height: 100px;"></div>
-                    <script>
-                        var data = [
-                            { label: 'Layer 1',
-                              values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ]}
-                        ];
-                       var areaChartInstance2 = $('#humidity').epoch({
-                            type: 'area',
-                            data: data,
-                            axes: ['left', 'right', 'bottom']
-                        });
-                    </script>
+                    <iframe src="http://localhost:8000/test.html"></iframe>
                 </div>
-                   
-                <div id="dust_chart" class="chart_box">
-                    <p class="value_name">미세먼지</p>
-                    <div id="dust" class="epoch category10" style="height: 100px;"></div>
-                    <script>
-                        var data = [
-                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
-                        ];
-                       var areaChartInstance2 = $('#dust').epoch({
-                            type: 'area',
-                            data: data,
-                            axes: ['left', 'right', 'bottom']
-                        });
-                    </script>
-                </div>
-                <div id="co2_chart" class="chart_box">
+            </div>
+            <div id="realtime_chart">
+                <div id="temperature_chart" class="chart_box">
                     <p class="value_name">CO2</p>
-                    <div id="co2" class="epoch category10" style="height: 100px;"></div>
-                    <script>
-                        var data = [
-                          { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] }
-                        ];
-                       var areaChartInstance = $('#co2').epoch({
-                            type: 'area',
-                            data: data,
-                            axes: ['left', 'right', 'bottom']
-                        });
-                    </script>
+                    <iframe src="http://localhost:8000/test.html"></iframe>
                 </div>
-                 
-                
+            </div>
+            <div id="realtime_chart">
+                <div id="temperature_chart" class="chart_box">
+                    <p class="value_name">미세먼지</p>
+                    <iframe src="http://localhost:8000/test.html"></iframe>
+                </div>
             </div>
         </div>
 	</div>
@@ -189,7 +154,6 @@
 
 	<script src="./js/main.js"></script>
 	<script src="./js/map.js"></script>
-	<script src="./js/data.js"></script>
 </body>
 
 </html>

@@ -1,65 +1,8 @@
-for (var i in building_names) {
-    var foo = new Building( building_names[i] );
-    foo.floors = [];
-    
-    for( var j in floor_names ){
-        var bar = new Floor( floor_names[j] );
-        bar.rooms = [];
-        
-        for( var k in room_names ){
-            var foobar = new Room( room_names[k] );
-            (bar.rooms).push(foobar);
-        }
-        (foo.floors).push(bar);
-    }
-    buildings.push( foo );
-}
-
-var delay = 3000
-setInterval(function() {
-    
-    // depth 1
-    buildings.forEach( function (building, index, array) {
-        building.getProperty();
-        building.updateColor();
-        
-        // depth 2
-        if( currentBuilding != null ){
-            
-            (currentBuilding.floors).forEach( function (floor, index, array) {
-                
-                floor.getProperty();
-                floor.updateColor();
-                
-                // depth 3
-                if( currentFloor != null ){
-                    
-                    (currentFloor.rooms).forEach( function (room, index, array) {
-                
-                        room.getProperty();
-                        room.updateColor();
-                        
-                    });
-                }
-                
-            });
-           
-        }
-        
-    })
-    
-}, delay);
-
-
-// depth 2
-flagFloors = true;
 
 
 
 
-
-
-
+// declare class.
 function Building(name) {
     this.name = name;
     
@@ -100,7 +43,6 @@ Building.prototype.getProperty = function () {
 //            this.humidity = data.humidity;
 //            this.co2 = data.co2;
 //            this.dust = data.dust;
-            console.log(self);
         }
     );
 }
@@ -108,7 +50,6 @@ Building.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
     $("#" + this.name).css("background-color", this.color);
 }
-
 
 function Floor(name) {
     this.name = name
@@ -150,7 +91,6 @@ Floor.prototype.getProperty = function () {
 //            this.humidity = data.humidity;
 //            this.co2 = data.co2;
 //            this.dust = data.dust;
-            console.log(self);
         }
     );
 }
@@ -158,8 +98,6 @@ Floor.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
     $("#" + this.name).css("background-color", this.color);
 }
-
-
 
 function Room(name) {
     this.name = name;
@@ -199,7 +137,6 @@ Room.prototype.getProperty = function () {
 //            this.humidity = data.humidity;
 //            this.co2 = data.co2;
 //            this.dust = data.dust;
-            console.log(self);
         }
     );
 }
@@ -215,24 +152,24 @@ function getObjectByName(name, objectList){
 }
 function returnEvaluatedColor(evluation){
     if( 4.5 <= evluation & evluation <= 5 ){
-        return "#006837";
+        return colorLegend[0];
     }else if( 4 <= evluation & evluation < 4.5 ){
-        return "#31a354";
+        return colorLegend[1];
     }else if( 3.5 <= evluation & evluation < 4 ){
-        return "#78c679";
+        return colorLegend[2];
     }else if( 3 <= evluation & evluation < 3.5 ){
-        return "#c2e699";
+        return colorLegend[3];
     }else if( 2.5 <= evluation & evluation < 3 ){
-        return "#ffffcc";
+        return colorLegend[4];
     }else if( 2 <= evluation & evluation < 2.5 ){
-        return "#fef0d9";
+        return colorLegend[5];
     }else if( 1.5 <= evluation & evluation < 2 ){
-        return "#fdcc8a";
+        return colorLegend[6];
     }else if( 1 <= evluation & evluation < 1.5 ){
-        return "#fc8d59";
+        return colorLegend[7];
     }else if( 0.5 <= evluation & evluation < 1 ){
-        return "#e34a33";
+        return colorLegend[8];
     }else if( 0 <= evluation & evluation < 0.5 ){
-        return "#b30000";
+        return colorLegend[9];
     }
 }
