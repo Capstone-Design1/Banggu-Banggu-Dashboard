@@ -8,10 +8,14 @@ var map = new mapboxgl.Map({
     hash: true
 });
 
+// Variables saving each layer name.
+// These are used for accessing each layers by name. (using map.getSource(name, ...))
 var buildingLayerNames = [];
 var floorLayerNames = [];
 
 map.on('load', function () {
+    
+    // Add Sources.
     map.addSource('buildings_source', {
         type: 'geojson',
         data: './asset/buildings.geojson'
@@ -27,6 +31,7 @@ map.on('load', function () {
         data: './asset/j3.geojson'
     });
     
+    // Add Layers.
     map.addLayer({
         'id': 'buildings',
         'type': 'fill-extrusion',
@@ -38,7 +43,6 @@ map.on('load', function () {
                 stops: colorStep
             },
             'fill-extrusion-height': 0
-//            'fill-extrusion-height': ["*", 10, ["get", "evaluation"]],
         },
         'minZoom': '3',
         'zoom': '3'
@@ -88,35 +92,3 @@ map.on('load', function () {
     });
     floorLayerNames.push("J3");
 })
-
-map.on('click', 'J-building', function (e) {
-    var properties = e.features[0].properties;
-
-    //        tooltip box    
-    var description =
-        "<p>평가 : <span class='" + properties.evaluation + "'>" +
-        properties.evaluation + "</span></p>" +
-        "<p>온도 : <span class='" + properties.evaluation + "'>" +
-        properties.temperature + " ℃</p>" +
-        "<p>습도 : <span class='" + properties.evaluation + "'>" +
-        properties.humidity + " %</p>" +
-        "<p>미세먼지 : <span class='" + properties.evaluation + "'>" +
-        properties.dust + " </p> " +
-        "<p>CO2 : <span class='" + properties.evaluation + "'>" +
-        properties.co2 + " ppm</p> ";
-
-    new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(description)
-        .addTo(map);
-});
-
-// Change the cursor to a pointer when the mouse is over the places layer.
-map.on('mouseenter', 'J-building', function () {
-    map.getCanvas().style.cursor = 'pointer';
-});
-
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'places', function () {
-    map.getCanvas().style.cursor = '';
-});

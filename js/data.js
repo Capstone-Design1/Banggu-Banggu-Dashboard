@@ -13,26 +13,6 @@ Building.prototype.getProperty = function () {
     self.property = building.property;
     self.lat = building.lat;
     self.lng = building.lng;
-    
-    
-//    // before request
-//    var prm = $.ajax({
-//        type: "POST",
-//        url: "",
-//        data: {
-//            name: self.name
-//        }
-//    });
-//
-//    // after response
-//    prm.then(
-//        function (data) {
-//            self.property = JSON.parse(data);
-//        },
-//        function (error) {
-//            console.log("ajax error. prm in " + this);
-//        }
-//    );
 }
 Building.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
@@ -52,24 +32,6 @@ Floor.prototype.getProperty = function () {
     var floor = getObjectByName(self.name, building.floor);
     self.property = floor.property;
     
-//    // before request
-//    var prm = $.ajax({
-//        type: "POST",
-//        url: "",
-//        data: {
-//            name: self.name
-//        }
-//    });
-//
-//    // after response
-//    prm.then(
-//        function (data) {
-//            self.property = JSON.parse(data);
-//        },
-//        function (error) {
-//            console.log("ajax error. prm in " + this);
-//        }
-//    );
 }
 Floor.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
@@ -91,24 +53,6 @@ Room.prototype.getProperty = function () {
     self.property = room.property;
     self.lat = room.lat;
     self.lng = room.lng;
-//    // before request
-//    var prm = $.ajax({
-//        type: "POST",
-//        url: "",
-//        data: {
-//            name: self.name
-//        }
-//    });
-//
-//    // after response
-//    prm.then(
-//        function (data) {
-//            self.property = JSON.parse(data);
-//        },
-//        function (error) {
-//            console.log("ajax error. prm in " + this);
-//        }
-//    );
 }
 Room.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
@@ -123,13 +67,6 @@ function getObjectByName(name, objectList){
 function returnEvaluatedColor(evaluation){
     return colorLegend[parseInt(evaluation / (0.5))];
 }
-//function updateGeoJson(sourceId, name){
-//    var obj = map.querySourceFeatures(sourceId, {filter: ["==", "name", name]});
-//    console.log(obj);
-//}
-
-
-// make regend
 function returnLegend(){
     
     var legend = $("<div class='legend'></div>");

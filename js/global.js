@@ -1,8 +1,11 @@
+/********* Dedicating current object in each depth) *********/ 
 var currentBuilding = null;
 var currentFloor = null;
 var currentRoom = null;
+/************************************************************/
 var chartOn = false;
 
+/********* color legend ***********/
 var colorLegend = ["#b30000", "#e34a33", "#fc8d59", "#fdcc8a", "#fef0d9", "#ffffcc", "#c2e699", "#78c679", "#31a354", "#006837"];
 var colorStep = [
                     [0.5, colorLegend[0]],
@@ -16,8 +19,15 @@ var colorStep = [
                     [4.5, colorLegend[8]],
                     [5, colorLegend[9]],
                 ];
+/*********************************/
 
+/********* main object ***********/
 var buildings = [];
+/*********************************/
+
+/********* Init buildings for 'demo' *********/
+// original source : json_building in '/asset/demo_data'
+
 for (var i in json_buildings) {
     var building = new Building(json_buildings[i].name);
     building.floors = [];
