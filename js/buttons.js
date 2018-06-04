@@ -14,9 +14,17 @@ $(document).ready(function () {
                 pitch: -14
             });
             
-            // Set Height of floor layers in map.
-            for (var i in floorLayerNames) {
-                map.setPaintProperty(floorLayerNames[i], 'fill-extrusion-height', 2);
+            
+            if( currentBuilding ){
+                // Set Height of floor layers in map.
+                for (var i in floorLayerNames) {
+                    map.setPaintProperty(floorLayerNames[i], 'fill-extrusion-height', 2);
+                }
+            }else{
+                
+                for (var i in buildingLayerNames) {
+                    map.setPaintProperty(buildingLayerNames[i], 'fill-extrusion-height', 0);
+                }
             }
             
             // Hide graph at right bottom.
@@ -36,8 +44,16 @@ $(document).ready(function () {
             });
             
             // Set Height of floor layers in map.
-            for (var i in floorLayerNames) {
-                map.setPaintProperty(floorLayerNames[i], 'fill-extrusion-height', ["*", 3, ["get", "evaluation"]]);
+            if( currentBuilding ){
+                
+                for (var i in floorLayerNames) {
+                    map.setPaintProperty(floorLayerNames[i], 'fill-extrusion-height', ["*", 3, ["get", "evaluation"]]);
+                }
+            }else{
+                
+                 for (var i in buildingLayerNames) {
+                    map.setPaintProperty(buildingLayerNames[i], 'fill-extrusion-height', ["*", 3, ["get", "evaluation"]]);
+                }
             }
             
             // Show graph at right bottom.

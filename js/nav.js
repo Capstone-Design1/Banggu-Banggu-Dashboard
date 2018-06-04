@@ -152,6 +152,8 @@ $(document).ready(function () {
             
             // Set opacity of building from 0.3 to 1. 
             map.setPaintProperty('buildings', 'fill-extrusion-opacity', 1);
+            
+            currentBuilding = null;
         }
     })
     
