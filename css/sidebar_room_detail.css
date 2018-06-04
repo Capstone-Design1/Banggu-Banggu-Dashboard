@@ -1,5 +1,5 @@
 #sidebar_room_detail{
-    width: 300px;
+    width: 330px;
     height: fit-content;
     margin-top: 170px;
     padding: 10px;
@@ -40,7 +40,7 @@ h5{
 }
 
 #evaluation .score{
-    width: 50px;
+    width: 80px;
 }
 
 #evaluation .legend{

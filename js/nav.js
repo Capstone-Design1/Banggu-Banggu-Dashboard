@@ -224,13 +224,13 @@ function showRoomDetail() {
     
     $("#score .score").text(currentRoom.property.evaluation);
 //    $("#score .score").css('color', (colorLegend[score - 1]));
-    $("#temperature .score").text(currentRoom.property.temperature);
+    $("#temperature .score").text(currentRoom.property.temperature + " ℃");
 //    $("#temperature .score").css('color', colorLegend[temperatureScore - 1]);
-    $("#humidity .score").text(currentRoom.property.humidity);
+    $("#humidity .score").text(currentRoom.property.humidity + " %");
 //    $("#humidity .score").css('color', colorLegend[humidityScore - 1]);
-    $("#co2 .score").text(currentRoom.property.co2);
+    $("#co2 .score").text(currentRoom.property.co2 + " ppm");
 //    $("#co2 .score").css('color', colorLegend[co2Score - 1]);
-    $("#dust .score").text(currentRoom.property.dust);
+    $("#dust .score").text(currentRoom.property.dust + " ㎍/㎥");
 //    $("#dust .score").css('color', colorLegend[dustScore - 1]);
 ;}
 
