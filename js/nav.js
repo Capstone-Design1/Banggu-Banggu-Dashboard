@@ -14,15 +14,15 @@ $(document).ready(function () {
         // Get current building object.
         var id = $(this).attr('id');
         currentBuilding = getObjectByName(id, buildings);
-
+        
+        // Set current opacity of building from 1 to 0.3. 
+        map.setPaintProperty('buildings', 'fill-extrusion-opacity', 0.3);
+        
         // Fly to current building location in map.
         map.flyTo({
             center: [currentBuilding.lng, currentBuilding.lat],
             zoom: 19.5
         })
-        
-        // Set current opacity of building from 1 to 0.3. 
-        map.setPaintProperty('buildings', 'fill-extrusion-opacity', 0.3);
 
         // Display the currentBuilding information text at left top.
         $("#current > #building").text(currentBuilding.name);
@@ -42,12 +42,6 @@ $(document).ready(function () {
 
         var id = $(this).attr('id');
         
-        // Fly to current building location in map.
-        map.flyTo({
-            center: [currentBuilding.lng, currentBuilding.lat],
-            zoom: 19.5
-        })
-        
         // If already currentFloor exists. (This mean that 'if already floor clicked before.)
         if (currentFloor) {
             // Make invisible existing floor layer.
@@ -63,6 +57,12 @@ $(document).ready(function () {
         // Make visible current floor layer.
         var layerId = currentBuilding.name + currentFloor.name;
         map.setLayoutProperty(layerId, 'visibility', 'visible');
+        
+        // Fly to current building location in map.
+        map.flyTo({
+            center: [currentBuilding.lng, currentBuilding.lat],
+            zoom: 19.5
+        })
 
         // Display the currentFloor information text at left top.
         $("#current > #floor").text(currentFloor.name);
@@ -83,12 +83,6 @@ $(document).ready(function () {
         
         var id = $(this).attr('id');
         
-        // Fly to current room location in map.
-        map.flyTo({
-            center: [currentRoom.lng, currentRoom.lat],
-            zoom: 21
-        })
-        
         // If already currentRoom exists. (This mean that 'if already room clicked before.)
         if (currentRoom) {
             
@@ -99,10 +93,16 @@ $(document).ready(function () {
 
         // Get current floor object.
         currentRoom = getObjectByName(id, currentFloor.rooms);
+        
+        // Fly to current room location in map.
+        map.flyTo({
+            center: [currentRoom.lng, currentRoom.lat],
+            zoom: 21
+        })
 
         // Display the currentRoom information text at left top.
         $("#current > #room").text(currentRoom.name[2] + currentRoom.name[3]);
-        $("#current > #room").css('background-color', currentFloor.color);
+        $("#current > #room").css('background-color', currentRoom.color);
         $("#current > #room").animate({ "margin-left": "+=80px"}, "slow");
         
         // Show floor list of current building.
@@ -114,12 +114,16 @@ $(document).ready(function () {
         
         if( currentRoom ){
             
-            $("#side_left").animate({ "left": "+=40px" }, "slow" );
-            $("#sidebar_rooms").hide();
             $("#sidebar_room_detail").hide();
             
             $("#current > #room").animate({ "margin-left": "-=80px" }, "slow" );
             
+            // Fly to current building location in map.
+            map.flyTo({
+                center: [currentBuilding.lng, currentBuilding.lat],
+                zoom: 19.5
+            })
+
             currentRoom = null;
             
         } else if ( currentFloor ){
@@ -127,6 +131,10 @@ $(document).ready(function () {
             $("#side_left").animate({ "left": "+=40px" }, "slow" );
             $("#sidebar_rooms").hide();
             $("#sidebar_room_detail").hide();
+            $("#current > #floor").animate({ "margin-left": "-=80px" }, "slow" );
+            
+            var layerId = currentBuilding.name + currentFloor.name;
+            map.setLayoutProperty(layerId, 'visibility', 'none');
             
             currentFloor = null;
             
@@ -134,7 +142,16 @@ $(document).ready(function () {
             
             $("#side_left").animate({ "left": "+=80px" }, "slow" );
             $("#sidebar_floor").hide();
-            $("#current > #floor").animate({ "margin-left": "-=80px" }, "slow" );
+            $("#current > #building").animate({ "margin-left": "-=80px" }, "slow" );
+            
+            // Fly to initial location in map.
+            map.flyTo({
+                center: [126.941667, 37.550901],
+                zoom: 17
+            })
+            
+            // Set opacity of building from 0.3 to 1. 
+            map.setPaintProperty('buildings', 'fill-extrusion-opacity', 1);
         }
     })
     

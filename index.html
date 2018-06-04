@@ -9,13 +9,15 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
 
-
-    <!--    custom-->
+    <!-- import custom js-->
     <script src="./asset/demo_data.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/global.js"></script>
+    <script src="./js/buttons.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/nav.js"></script>
     
-        <!-- import css -->
+    <!-- import custom css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -27,30 +29,13 @@
     <link rel="stylesheet" href="css/search.css">
 
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Sogang Space Dashboard</title>
 </head>
 
 <body>
     <div id='map'></div>
-    <!--
-	<div id="sidebar_main_wide">
-		<div class="title">
-			<h1>서강스페이스</h1>
-			<h3>대시보드</h3>
-		</div>
-		<div>
-			<ul>
-				<li id="all">캠퍼스 전체</li>
-				<li id="J">J관</li>
-				<li id="RA">RA관</li>
-				<li id="R">R관</li>
-				<li id="K">K관</li>
-				<li id="D">D관</li>
-				<li id="M">M관</li>
-			</ul>
-		</div>
-	</div>
--->
+    <script src="./js/map.js"></script>
+    
     <div id="current">
        <div id="building">
        </div>
@@ -164,8 +149,6 @@
     <div id="plot-graph">
         <div id="plot" class="epoch"></div>
     </div>
-    <script src="./js/main.js"></script>
-    <script src="./js/map.js"></script>
 </body>
 
 </html>

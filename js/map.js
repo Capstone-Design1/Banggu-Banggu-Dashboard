@@ -66,7 +66,7 @@ map.on('load', function () {
             },
             'fill-extrusion-height': 2
         },
-        'minzoom': 19.5,
+        'minzoom': 19.4,
     });
     floorLayerNames.push("J2");
 
@@ -87,7 +87,7 @@ map.on('load', function () {
             },
             'fill-extrusion-height': 2
         },
-        'minzoom': 19.5,
+        'minzoom': 19.4,
         'visibility': 'none'
     });
     floorLayerNames.push("J3");
