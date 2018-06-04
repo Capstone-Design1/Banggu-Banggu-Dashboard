@@ -188,6 +188,112 @@ function showRoomList() {
 
 function showRoomDetail() {
     $("#sidebar_room_detail").show();
-    $("#sidebar_room_detail").find("h5").text(currentRoom.name);
-    $("#rating").text(currentRoom.property.evaluation);
+    $("#sidebar_room_detail").css("background-color", currentRoom.color+"aa");
+    
+    // Legend init.
+    var size = $("#evaluation .legend > div").length;
+    for( var i=0 ; i<size ; i++  ){
+        var div = $($(".legend > div")[i]);
+        div.css('opacity', '0.3');
+        div.css('border', 'none');
+    }
+    
+    // Set legend div. 
+    temperatureScore = returnEvaluatedTemp(currentRoom.property.temperature);
+    $($("#temperature > .legend > div")[5 - temperatureScore]).css('opacity', '1');
+    $($("#temperature > .legend > div")[5 - temperatureScore]).css('border', '3px solid black');
+    
+    humidityScore = returnEvaluatedHum(currentRoom.property.humidty);
+    $($("#humidity > .legend > div")[5 - humidityScore]).css('opacity', '1');
+    $($("#humidity > .legend > div")[5 - humidityScore]).css('border', '3px solid black');
+    
+    co2Score = returnEvaluatedCo2(currentRoom.property.co2);
+    $($("#co2 > .legend > div")[5 - co2Score]).css('opacity', '1');
+    $($("#co2 > .legend > div")[5 - co2Score]).css('border', '3px solid black');
+    
+    dustScore = returnEvaluatedDust(currentRoom.property.dust);
+    $($("#dust > .legend > div")[5 - dustScore]).css('opacity', '1');
+    $($("#dust > .legend > div")[5 - dustScore]).css('border', '3px solid black');
+    
+    score = parseInt(currentRoom.property.evaluation);
+    $($("#score > .legend > div")[4 - score]).css('opacity', '1');
+    $($("#score > .legend > div")[4 - score]).css('border', '3px solid black');
+    
+    // Set score.
+    $(".score").css('color', 'white');
+    
+    $("#score .score").text(currentRoom.property.evaluation);
+//    $("#score .score").css('color', (colorLegend[score - 1]));
+    $("#temperature .score").text(currentRoom.property.temperature);
+//    $("#temperature .score").css('color', colorLegend[temperatureScore - 1]);
+    $("#humidity .score").text(currentRoom.property.humidity);
+//    $("#humidity .score").css('color', colorLegend[humidityScore - 1]);
+    $("#co2 .score").text(currentRoom.property.co2);
+//    $("#co2 .score").css('color', colorLegend[co2Score - 1]);
+    $("#dust .score").text(currentRoom.property.dust);
+//    $("#dust .score").css('color', colorLegend[dustScore - 1]);
+;}
+
+function returnEvaluatedTemp(temperature){
+    if( 21 < temperature <= 23 )
+        return 5;
+    else if( 23 < temperature <= 25 || 19 < temperature <= 21 )
+        return 4;
+    else if( 25 <= temperature < 27 || 17 <= temperature < 19)
+        return 3;
+    else if( 27 <= temperature < 29 || 15 <= temperature < 17 )
+        return 2;
+    else {
+        return 1;
+    }
+}
+
+function returnEvaluatedHum(humidity){
+    if( 50 < humidity <= 60 )
+        return 5;
+    else if( 60 < humidity <= 70 || 40 < humidity <= 50 )
+        return 4;
+    else if( 70 <= humidity < 80 || 30 <= humidity < 40)
+        return 3;
+    else if( 80 <= humidity < 90 || 20 <= humidity < 30 )
+        return 2;
+    else {
+        return 1;
+    }
+}
+
+function returnEvaluatedCo2(co2){
+    if( co2 <= 450 )
+        return 5;
+    else if( co2 <= 700 )
+        return 4;
+    else if( co2 <= 1000 )
+        return 3;
+    else if( co2 <= 2000 )
+        return 2;
+    else {
+        return 1;
+    }
+}
+
+function returnEvaluatedDust(dust){
+    if( dust <= 30 )
+        return 5;
+    else if( dust <= 80 )
+        return 4;
+    else if( dust <= 120 )
+        return 3;
+    else if( dust <= 200 )
+        return 2;
+    else {
+        return 1;
+    }
+}
+
+function returnEvaluation(temperature, humidity, co2, dust){
+    score = 0.25 * temperature +
+        0.25 * humidity +
+        0.25 * co2 +
+        0.25 * dust;
+    return score;
 }
