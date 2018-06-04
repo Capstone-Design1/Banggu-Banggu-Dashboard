@@ -3,320 +3,8 @@
     {
       "type": "Feature",
       "properties": {
-          "name": "J301",
-            "evaluation": 2.2,
-            "temperature": 25.4,
-            "humidity": 50,
-            "co2": 540,
-            "dust": 10
-          },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.943357,
-              37.550265
-            ],
-            [
-              126.943378,
-              37.550193
-            ],
-            [
-              126.943425,
-              37.550202
-            ],
-            [
-              126.943402,
-              37.550275
-            ],
-            [
-              126.943357,
-              37.550265
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "0044acb33d3e60665f143d05a0f6984a"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-          "name": "J302",
-            "evaluation": 3.7,
-            "temperature": 25.4,
-            "humidity": 50,
-            "co2": 540,
-            "dust": 10
-          },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.943299,
-              37.550254
-            ],
-            [
-              126.94332,
-              37.550183
-            ],
-            [
-              126.943368,
-              37.550192
-            ],
-            [
-              126.943345,
-              37.550263
-            ],
-            [
-              126.943299,
-              37.550254
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "0d58b4627ac6bca35df6732147755ad7"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J303",
-        "evaluation": 3,
-        "temperature": 25.4,
-        "humidity": 50,
-        "co2": 540,
-        "dust": 10
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.94296,
-              37.550428
-            ],
-            [
-              126.942984,
-              37.550355
-            ],
-            [
-              126.943162,
-              37.550389
-            ],
-            [
-              126.943137,
-              37.550465
-            ],
-            [
-              126.94296,
-              37.550428
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "2789623effd20d9a298ca17539475323"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J304",
-        "evaluation": 2.5,
-        "temperature": 25.4,
-        "humidity": 50,
-        "co2": 540,
-        "dust": 10
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.943061,
-              37.550205
-            ],
-            [
-              126.943084,
-              37.550131
-            ],
-            [
-              126.942981,
-              37.550111
-            ],
-            [
-              126.942958,
-              37.550185
-            ],
-            [
-              126.943061,
-              37.550205
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "6e0766a28b12c3dc31146d7fc250c2ac"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J305",
-        "evaluation": 1.6,
-        "temperature": 25.4,
-        "humidity": 50,
-        "co2": 540,
-        "dust": 10
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.942944,
-              37.550183
-            ],
-            [
-              126.942968,
-              37.550108
-            ],
-            [
-              126.942859,
-              37.550086
-            ],
-            [
-              126.942837,
-              37.550163
-            ],
-            [
-              126.942944,
-              37.550183
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "82f1de7959372bd954f90f4243845fe4"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J306",
-        "evaluation": 2,
-        "temperature": 25.4,
-        "humidity": 50,
-        "co2": 540,
-        "dust": 10
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.943233,
-              37.550241
-            ],
-            [
-              126.943255,
-              37.550171
-            ],
-            [
-              126.943308,
-              37.550181
-            ],
-            [
-              126.943286,
-              37.550251
-            ],
-            [
-              126.943233,
-              37.550241
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "a1742a1880088d0a24689a2102ff2d50"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J307",
-        "evaluation": 4.1,
-        "temperature": 25.4,
-        "humidity": 50,
-        "co2": 540,
-        "dust": 10
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.943418,
-              37.550278
-            ],
-            [
-              126.94344,
-              37.550205
-            ],
-            [
-              126.943564,
-              37.550231
-            ],
-            [
-              126.943542,
-              37.550301
-            ],
-            [
-              126.943418,
-              37.550278
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "b076850e01b75a3efa0ede340e77a620"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J308",
-        "evaluation": 3.1,
-        "temperature": 25.4,
-        "humidity": 50,
-        "co2": 540,
-        "dust": 10
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              126.943195,
-              37.550281
-            ],
-            [
-              126.94307,
-              37.550255
-            ],
-            [
-              126.943057,
-              37.550298
-            ],
-            [
-              126.943183,
-              37.550323
-            ],
-            [
-              126.943195,
-              37.550281
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      },
-      "id": "b1f2bd2ab10b218d29b046457f0c0d5d"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "J309",
-        "evaluation": 0.6,
+        "name": "J302",
+        "evaluation": 3.7,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -349,13 +37,130 @@
         ],
         "type": "Polygon"
       },
-      "id": "ec8947b4590851051f64bb416920198d"
+      "id": "01693d7e92d3b1b771faa2ba51b1c88b"
     },
     {
       "type": "Feature",
       "properties": {
         "name": "J310",
         "evaluation": 0.2,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.943357,
+              37.550265
+            ],
+            [
+              126.943378,
+              37.550193
+            ],
+            [
+              126.943425,
+              37.550202
+            ],
+            [
+              126.943402,
+              37.550275
+            ],
+            [
+              126.943357,
+              37.550265
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1d724d67ea9ae343132fb54af5f50393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J301",
+        "evaluation": 2.2,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.94296,
+              37.550428
+            ],
+            [
+              126.942984,
+              37.550355
+            ],
+            [
+              126.943162,
+              37.550389
+            ],
+            [
+              126.943137,
+              37.550465
+            ],
+            [
+              126.94296,
+              37.550428
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1d8506d8b6c4da7c08d6eca1a5730a2d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J304",
+        "evaluation": 2.5,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.942944,
+              37.550183
+            ],
+            [
+              126.942968,
+              37.550108
+            ],
+            [
+              126.942859,
+              37.550086
+            ],
+            [
+              126.942837,
+              37.550163
+            ],
+            [
+              126.942944,
+              37.550183
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5c33566b2a78c6bad4e05b1c810bb010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J307",
+        "evaluation": 4.1,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -388,13 +193,91 @@
         ],
         "type": "Polygon"
       },
-      "id": "f9471c743a6696f989f5d5fda6b4cf33"
+      "id": "6ea5faa818c44e11c03d91f50d31fd64"
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "J311",
-        "evaluation": 1.5,
+        "name": "J303",
+        "evaluation": 3,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.943195,
+              37.550281
+            ],
+            [
+              126.94307,
+              37.550255
+            ],
+            [
+              126.943057,
+              37.550298
+            ],
+            [
+              126.943183,
+              37.550323
+            ],
+            [
+              126.943195,
+              37.550281
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "997eaac2c4e6da1334b4b3d8ab11d87a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J305",
+        "evaluation": 1.6,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.943061,
+              37.550205
+            ],
+            [
+              126.943084,
+              37.550131
+            ],
+            [
+              126.942981,
+              37.550111
+            ],
+            [
+              126.942958,
+              37.550185
+            ],
+            [
+              126.943061,
+              37.550205
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a37b9aa60aea839d114b94a4acfccf2f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J306",
+        "evaluation": 2,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -427,7 +310,124 @@
         ],
         "type": "Polygon"
       },
-      "id": "fc376ba73a505a5b25fd6be2a1402a40"
+      "id": "afbed6983da829463c4c979033b50b7a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J309",
+        "evaluation": 0.6,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.943299,
+              37.550254
+            ],
+            [
+              126.94332,
+              37.550183
+            ],
+            [
+              126.943368,
+              37.550192
+            ],
+            [
+              126.943345,
+              37.550263
+            ],
+            [
+              126.943299,
+              37.550254
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b838c7a683c3a4c8d24c339ce9accc7d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J308",
+        "evaluation": 3.1,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.943233,
+              37.550241
+            ],
+            [
+              126.943255,
+              37.550171
+            ],
+            [
+              126.943308,
+              37.550181
+            ],
+            [
+              126.943286,
+              37.550251
+            ],
+            [
+              126.943233,
+              37.550241
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b89fe772774ce742630169ee8ee1eaac"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J311",
+        "evaluation": 1.5,
+        "temperature": 25.4,
+        "humidity": 50,
+        "co2": 540,
+        "dust": 10
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              126.943418,
+              37.550278
+            ],
+            [
+              126.94344,
+              37.550205
+            ],
+            [
+              126.943564,
+              37.550231
+            ],
+            [
+              126.943542,
+              37.550301
+            ],
+            [
+              126.943418,
+              37.550278
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ead618d98e959941dd021dfe265b2845"
     }
   ],
   "type": "FeatureCollection"

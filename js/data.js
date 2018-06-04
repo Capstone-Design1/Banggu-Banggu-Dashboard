@@ -65,14 +65,14 @@ function getObjectByName(name, objectList){
             return objectList[i]; 
 }
 function returnEvaluatedColor(evaluation){
-    return colorLegend[parseInt(evaluation / (0.5))];
+    return colorLegend[parseInt(evaluation)];
 }
 function returnLegend(){
     
     var legend = $("<div class='legend'></div>");
     for( var i in colorLegend){
         var div = $("<div></div>");
-        div.css('background-color', colorLegend[9-i]);
+        div.css('background-color', colorLegend[4-i]);
         legend.append(div);
     }
     

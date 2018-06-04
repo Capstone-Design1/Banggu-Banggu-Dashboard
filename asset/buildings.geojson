@@ -3,7 +3,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "BA",
+        "name": "GN",
         "evaluation": 2.2,
         "temperature": 25.4,
         "humidity": 50,
@@ -142,7 +142,7 @@
       "type": "Feature",
       "properties": {
         "name": "X",
-        "evaluation": 4.8,
+        "evaluation": 4.2,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -225,7 +225,7 @@
       "type": "Feature",
       "properties": {
         "name": "AS",
-        "evaluation": 3.6,
+        "evaluation": 1.8,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -313,7 +313,7 @@
       "type": "Feature",
       "properties": {
         "name": "K",
-        "evaluation": 3,
+        "evaluation": 3.5,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -468,7 +468,7 @@
       "type": "Feature",
       "properties": {
         "name": "R",
-        "evaluation": 1.8,
+        "evaluation": 0.7,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,

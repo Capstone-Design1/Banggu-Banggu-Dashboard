@@ -6,18 +6,13 @@ var currentRoom = null;
 var chartOn = false;
 
 /********* color legend ***********/
-var colorLegend = ["#b30000", "#e34a33", "#fc8d59", "#fdcc8a", "#fef0d9", "#ffffcc", "#c2e699", "#78c679", "#31a354", "#006837"];
+var colorLegend = ["#e34a33", "#fdcc8a", "#fef0d9", "#78c679", "#31a354"];
 var colorStep = [
-                    [0.5, colorLegend[0]],
+                    [0, colorLegend[0]],
                     [1, colorLegend[1]],
-                    [1.5, colorLegend[2]],
-                    [2, colorLegend[3]],
-                    [2.5, colorLegend[4]],
-                    [3, colorLegend[5]],
-                    [3.5, colorLegend[6]],
-                    [4, colorLegend[7]],
-                    [4.5, colorLegend[8]],
-                    [5, colorLegend[9]],
+                    [2, colorLegend[2]],
+                    [3, colorLegend[3]],
+                    [4, colorLegend[4]],
                 ];
 /*********************************/
 

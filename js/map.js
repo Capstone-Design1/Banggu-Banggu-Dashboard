@@ -38,10 +38,14 @@ map.on('load', function () {
         'source': 'buildings_source',
         'layout': {},
         'paint': {
-            'fill-extrusion-color': {
-                property : 'evaluation',
-                stops: colorStep
-            },
+            'fill-extrusion-color': ["step",
+                    ["get", "evaluation"],
+                    colorStep[0][1],
+                    colorStep[1][0], colorStep[1][1],
+                    colorStep[2][0], colorStep[2][1],
+                    colorStep[3][0], colorStep[3][1],
+                    colorStep[4][0], colorStep[4][1]
+                ],
             'fill-extrusion-height': 0
         },
         'minZoom': '3',
@@ -60,10 +64,14 @@ map.on('load', function () {
             'visibility': 'none'
         },
        'paint': {
-            'fill-extrusion-color': {
-                property : 'evaluation',
-                stops: colorStep
-            },
+            'fill-extrusion-color': ["step",
+                    ["get", "evaluation"],
+                    colorStep[0][1],
+                    colorStep[1][0], colorStep[1][1],
+                    colorStep[2][0], colorStep[2][1],
+                    colorStep[3][0], colorStep[3][1],
+                    colorStep[4][0], colorStep[4][1]
+                ],
             'fill-extrusion-height': 2
         },
         'minzoom': 19.4,
@@ -81,10 +89,14 @@ map.on('load', function () {
             'visibility': 'none'
         },
          'paint': {
-            'fill-extrusion-color': {
-                property : 'evaluation',
-                stops: colorStep
-            },
+            'fill-extrusion-color': ["step",
+                    ["get", "evaluation"],
+                    colorStep[0][1],
+                    colorStep[1][0], colorStep[1][1],
+                    colorStep[2][0], colorStep[2][1],
+                    colorStep[3][0], colorStep[3][1],
+                    colorStep[4][0], colorStep[4][1]
+                ],
             'fill-extrusion-height': 2
         },
         'minzoom': 19.4,

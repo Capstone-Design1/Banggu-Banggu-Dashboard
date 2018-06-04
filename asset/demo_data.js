@@ -299,7 +299,7 @@ json_buildings.push(json_building);
 json_building = {
     'name': 'AS',
     'property': {
-        evaluation: 3.6,
+        evaluation: 1.8,
         temperature: 25.4,
         humidity: 50,
         co2: 540,
@@ -313,7 +313,7 @@ json_buildings.push(json_building);
 json_building = {
     'name': 'R',
     'property': {
-        evaluation: 1.8,
+        evaluation: 0.7,
         temperature: 25.4,
         humidity: 50,
         co2: 540,
@@ -327,7 +327,7 @@ json_buildings.push(json_building);
 json_building = {
     'name': 'K',
     'property': {
-        evaluation: 3,
+        evaluation: 3.2,
         temperature: 25.4,
         humidity: 50,
         co2: 540,
@@ -339,7 +339,7 @@ json_building = {
 json_buildings.push(json_building);
 
 json_building = {
-    'name': 'BA',
+    'name': 'GN',
     'property': {
         evaluation: 2.2,
         temperature: 25.4,
@@ -355,7 +355,7 @@ json_buildings.push(json_building);
 json_building = {
     'name': 'X',
     'property': {
-        evaluation: 4.8,
+        evaluation: 4.2,
         temperature: 25.4,
         humidity: 50,
         co2: 540,
