@@ -7,7 +7,6 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="js/epoch.min.js"></script>
-
     <link rel="stylesheet" type="text/css" href="css/epoch.min.css">
 
     <script>
@@ -22,7 +21,9 @@
 
 <body>
 
-    <div class="epoch"></div>
+    <div id="realtime">
+        <div class="epoch"></div>
+    </div>
 
     <script>
         $(function() {
@@ -31,7 +32,7 @@
                 values: []
             }];
 
-            var chart = $('.epoch').epoch({
+            var chart = $('#realtime > .epoch').epoch({
                 type: 'time.area',
                 pixelRatio: 1,
                 axes: ['left', 'bottom'],

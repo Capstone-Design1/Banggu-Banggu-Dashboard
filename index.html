@@ -2,41 +2,37 @@
 <html lang="en">
 
 <head>
-	<!-- import jQuery -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-	<!-- import mapbox -->
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- import mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
 
-	<!-- import css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/sidebar_main_wide.css">
-	<link rel="stylesheet" href="css/sidebar_main_narrow.css">
-	<link rel="stylesheet" href="css/sidebar_floor.css">
-	<link rel="stylesheet" href="css/sidebar_rooms.css">
-	<link rel="stylesheet" href="css/sidebar_room_detail.css">
-	<link rel="stylesheet" href="css/search.css">
-	
-    <!--import epoch-->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/js/epoch.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.8.4/css/epoch.min.css">
+
+    <!--    custom-->
+    <script src="./asset/demo_data.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/global.js"></script>
     
-<!--    custom-->
+        <!-- import css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sidebar_main_wide.css">
+    <link rel="stylesheet" href="css/sidebar_main_narrow.css">
+    <link rel="stylesheet" href="css/sidebar_floor.css">
+    <link rel="stylesheet" href="css/sidebar_rooms.css">
+    <link rel="stylesheet" href="css/sidebar_room_detail.css">
+    <link rel="stylesheet" href="css/search.css">
 
-	<script src="./js/data.js"></script>
-	<script src="./js/global.js"></script>
-    
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 
 <body>
-	<div id='map'></div>
-<!--
+    <div id='map'></div>
+    <!--
 	<div id="sidebar_main_wide">
 		<div class="title">
 			<h1>서강스페이스</h1>
@@ -55,51 +51,70 @@
 		</div>
 	</div>
 -->
+    <div id="current">
+       <div id="building">
+       </div>
+       <div id="floor">
+       </div>
+       <div id="room">
+       </div>
+    </div>
+       
+   
     <div id="side_left">
         <div id="sidebar_main_narrow">
             <div class="title">
             </div>
             <div>
-                <ul>
-                    <li id="All">All</li>
-                    <li id="J">J</li>
-                    <li id="RA">RA</li>
-                    <li id="R">R</li>
-                    <li id="K">K</li>
-                    <li id="D">D</li>
-                    <li id="M">M</li>
+                <ul id="building_list">
                 </ul>
             </div>
         </div>
 
         <div id="sidebar_floor">
-            <ul>
-                <li id="5">5</li>
-                <li id="4">4</li>
-                <li id="3">3</li>
-                <li id="2">2</li>
-                <li id="1">1</li>
+            <div class="back">
+                <img src="./image/back.png" alt="">
+            </div>
+            <ul id="floor_list">
             </ul>
         </div>
-        
+
         <div id="sidebar_rooms">
-            <ul>
-                <li id="J319">J319</li>
-                <li id="J318">J318</li>
-                <li id="J317">J317</li>
-                <li id="J316">J316</li>
-                <li id="J315">J315</li>
+           <div class="back">
+                <img src="./image/back.png" alt="">
+            </div>
+            <ul id="room_list">
             </ul>
         </div>
-        
+
         <div id="sidebar_room_detail">
-            <h5>Room-name</h5>
-            
+<!--            <h5>Room-name</h5>-->
+
+
             <div id="evaluation">
                 <p id="state">환경 점수</p>
-                <p id="rating">evaluation</p>
+<!--                <p id="rating">evaluation</p>-->
+                <div id="temperature">
+                    <p>온도</p>
+                    
+                </div>
+                <div id="humidity">
+                    <p>습도</p>
+                </div>
+                <div id="co2">
+                    <p>CO2</p>
+                </div>
+                <div id="dust">
+                    <p>미세먼지</p>
+                </div>
             </div>
-            
+            <script>
+                var field = $("#evaluation > div");
+                for(var i=0 ; i < field.length ; i++){
+                    $(field[i]).append(returnLegend());
+                }
+            </script>
+<!--
             <div id="realtime_chart">
                 <div id="temperature_chart" class="chart_box">
                     <p class="value_name">온도</p>
@@ -124,36 +139,33 @@
                     <iframe src="http://localhost:8000/test.html"></iframe>
                 </div>
             </div>
+-->
         </div>
-	</div>
-   
-<!--
+    </div>
+
+    <!--
     <form method="get" action="/search" id="search">
         <input name="q" type="text" size="40" placeholder="Search..." />
     </form>
 -->
     <div id="legend">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
         
-        <script>
-            var index = 0;
-            $("#legend > div").each( function(){
-                $(this).css("background-color", colorLegend[index++]);
-            });
-        </script>
     </div>
 
-	<script src="./js/main.js"></script>
-	<script src="./js/map.js"></script>
+    <div id="graph-icon">
+        <img src="./image/bar-chart.png" alt="chart-icon">
+    </div>
+    
+    <!--import epoch-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="chart/js/epoch.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="chart/css/epoch.min.css">
+    <div id="plot-graph">
+        <div id="plot" class="epoch"></div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/map.js"></script>
 </body>
 
 </html>

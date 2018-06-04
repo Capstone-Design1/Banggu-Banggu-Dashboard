@@ -1,26 +1,38 @@
-var building_names = ['J', ];
-var floor_names = [1,2,3,4,5];
-var room_names = ["J315", "J316", "J317", "J318", "J319",];
-var buildings = [];
-
 var currentBuilding = null;
 var currentFloor = null;
+var currentRoom = null;
+var chartOn = false;
 
-var colorLegend = ["#006837", "#31a354", "#78c679", "#c2e699", "#ffffcc", "#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"];
+var colorLegend = ["#b30000", "#e34a33", "#fc8d59", "#fdcc8a", "#fef0d9", "#ffffcc", "#c2e699", "#78c679", "#31a354", "#006837"];
+var colorStep = [
+                    [0.5, colorLegend[0]],
+                    [1, colorLegend[1]],
+                    [1.5, colorLegend[2]],
+                    [2, colorLegend[3]],
+                    [2.5, colorLegend[4]],
+                    [3, colorLegend[5]],
+                    [3.5, colorLegend[6]],
+                    [4, colorLegend[7]],
+                    [4.5, colorLegend[8]],
+                    [5, colorLegend[9]],
+                ];
 
-for (var i in building_names) {
-    var foo = new Building( building_names[i] );
-    foo.floors = [];
-    
-    for( var j in floor_names ){
-        var bar = new Floor( floor_names[j] );
-        bar.rooms = [];
-        
-        for( var k in room_names ){
-            var foobar = new Room( room_names[k] );
-            (bar.rooms).push(foobar);
+var buildings = [];
+for (var i in json_buildings) {
+    var building = new Building(json_buildings[i].name);
+    building.floors = [];
+
+    for (var j in json_buildings[i].floor) {
+        var floor = new Floor(json_buildings[i].floor[j].name);
+        floor.rooms = [];
+
+        for (var k in json_buildings[i].floor[j].room) {
+            var room = new Room(json_buildings[i].floor[j].room[k].name);
+            floor.rooms.push(room);
         }
-        (foo.floors).push(bar);
+        
+        building.floors.push(floor);
     }
-    buildings.push( foo );
+    
+    buildings.push(building);
 }

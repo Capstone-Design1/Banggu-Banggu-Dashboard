@@ -1,7 +1,3 @@
-
-
-
-
 // declare class.
 function Building(name) {
     this.name = name;
@@ -13,38 +9,30 @@ Building.prototype.getProperty = function () {
     
     var self = this;
     
-    // before request
-    var prm = $.ajax({
-        type: "POST",
-        url: "",
-        data: {
-            name: self.name
-        }
-    });
-
-    // after response
-    prm.then(
-        function (data) {
-            //
-        },
-        function (error) {
-            console.log("ajax error. prm in " + this);
-            data = {
-                evaluation : 4.3,
-                temperature : 25.4,
-                humidity : 50,
-                co2 : 540,
-                dust : 10
-            };
-            self.property = data;
+    var building = getObjectByName(self.name, json_buildings);
+    self.property = building.property;
+    self.lat = building.lat;
+    self.lng = building.lng;
+    
+    
+//    // before request
+//    var prm = $.ajax({
+//        type: "POST",
+//        url: "",
+//        data: {
+//            name: self.name
+//        }
+//    });
+//
+//    // after response
+//    prm.then(
+//        function (data) {
 //            self.property = JSON.parse(data);
-//            this.evaluation = data.evaluatuon;
-//            this.temperature = data.temperature;
-//            this.humidity = data.humidity;
-//            this.co2 = data.co2;
-//            this.dust = data.dust;
-        }
-    );
+//        },
+//        function (error) {
+//            console.log("ajax error. prm in " + this);
+//        }
+//    );
 }
 Building.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
@@ -60,39 +48,28 @@ function Floor(name) {
 Floor.prototype.getProperty = function () {
     
     var self = this;
+    var building = getObjectByName(currentBuilding.name, json_buildings);
+    var floor = getObjectByName(self.name, building.floor);
+    self.property = floor.property;
     
-    // before request
-    var prm = $.ajax({
-        type: "POST",
-        url: "",
-        data: {
-            name: self.name
-        }
-    });
-
-    // after response
-    prm.then(
-        function (data) {
-            //
-        },
-        function (error) {
-            console.log("ajax error. prm in " + this);
-            data = {
-                evaluation : 3.5,
-                temperature : 25.4,
-                humidity : 50,
-                co2 : 540,
-                dust : 10,
-            };
-            self.property = data;
+//    // before request
+//    var prm = $.ajax({
+//        type: "POST",
+//        url: "",
+//        data: {
+//            name: self.name
+//        }
+//    });
+//
+//    // after response
+//    prm.then(
+//        function (data) {
 //            self.property = JSON.parse(data);
-//            this.evaluation = data.evaluatuon;
-//            this.temperature = data.temperature;
-//            this.humidity = data.humidity;
-//            this.co2 = data.co2;
-//            this.dust = data.dust;
-        }
-    );
+//        },
+//        function (error) {
+//            console.log("ajax error. prm in " + this);
+//        }
+//    );
 }
 Floor.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
@@ -105,40 +82,33 @@ function Room(name) {
     var color;
 }
 Room.prototype.getProperty = function () {
- var self = this;
+    var self = this;
     
-    // before request
-    var prm = $.ajax({
-        type: "POST",
-        url: "",
-        data: {
-            name: self.name
-        }
-    });
-
-    // after response
-    prm.then(
-        function (data) {
-            //
-        },
-        function (error) {
-            console.log("ajax error. prm in " + this);
-            data = {
-                evaluation : 1.8,
-                temperature : 25.4,
-                humidity : 50,
-                co2 : 540,
-                dust : 10
-            }; 
-            self.property = data;
+    var building = getObjectByName(currentBuilding.name, json_buildings);
+    var floor = getObjectByName(currentFloor.name, building.floor);
+    var room = getObjectByName(self.name, floor.room);
+    
+    self.property = room.property;
+    self.lat = room.lat;
+    self.lng = room.lng;
+//    // before request
+//    var prm = $.ajax({
+//        type: "POST",
+//        url: "",
+//        data: {
+//            name: self.name
+//        }
+//    });
+//
+//    // after response
+//    prm.then(
+//        function (data) {
 //            self.property = JSON.parse(data);
-//            this.evaluation = data.evaluatuon;
-//            this.temperature = data.temperature;
-//            this.humidity = data.humidity;
-//            this.co2 = data.co2;
-//            this.dust = data.dust;
-        }
-    );
+//        },
+//        function (error) {
+//            console.log("ajax error. prm in " + this);
+//        }
+//    );
 }
 Room.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
@@ -150,26 +120,24 @@ function getObjectByName(name, objectList){
         if( objectList[i].name == name )
             return objectList[i]; 
 }
-function returnEvaluatedColor(evluation){
-    if( 4.5 <= evluation & evluation <= 5 ){
-        return colorLegend[0];
-    }else if( 4 <= evluation & evluation < 4.5 ){
-        return colorLegend[1];
-    }else if( 3.5 <= evluation & evluation < 4 ){
-        return colorLegend[2];
-    }else if( 3 <= evluation & evluation < 3.5 ){
-        return colorLegend[3];
-    }else if( 2.5 <= evluation & evluation < 3 ){
-        return colorLegend[4];
-    }else if( 2 <= evluation & evluation < 2.5 ){
-        return colorLegend[5];
-    }else if( 1.5 <= evluation & evluation < 2 ){
-        return colorLegend[6];
-    }else if( 1 <= evluation & evluation < 1.5 ){
-        return colorLegend[7];
-    }else if( 0.5 <= evluation & evluation < 1 ){
-        return colorLegend[8];
-    }else if( 0 <= evluation & evluation < 0.5 ){
-        return colorLegend[9];
+function returnEvaluatedColor(evaluation){
+    return colorLegend[parseInt(evaluation / (0.5))];
+}
+//function updateGeoJson(sourceId, name){
+//    var obj = map.querySourceFeatures(sourceId, {filter: ["==", "name", name]});
+//    console.log(obj);
+//}
+
+
+// make regend
+function returnLegend(){
+    
+    var legend = $("<div class='legend'></div>");
+    for( var i in colorLegend){
+        var div = $("<div></div>");
+        div.css('background-color', colorLegend[9-i]);
+        legend.append(div);
     }
+    
+    return legend;
 }

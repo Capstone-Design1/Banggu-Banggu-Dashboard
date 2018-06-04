@@ -1,11 +1,11 @@
 #sidebar_main_narrow{
 	width: 80px;
 	height: 100%;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0);
 }
 
 #sidebar_main_narrow > .title{
-    height: 130px;
+    height: 200px;
 }
 
 #sidebar_main_narrow ul li{

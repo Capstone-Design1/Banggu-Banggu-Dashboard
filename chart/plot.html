@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/epoch.min.js"></script>
+    
+<!--    <script src="js/data.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/tests.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/epoch.min.css">
+</head>
+
+<body>
+    <div class="epoch" style="height:100px;"></div>
+    <script>
+        $(function() {
+            var data = [{
+                    values: [{x: 'A', y: 10}, {x: 'B', y: 20}, {x: 'C', y: 30}] },
+                ];
+
+            $('.epoch').epoch({
+                type: 'bar',
+                data: data,
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -66,19 +66,95 @@ div{
     margin: 10px 10px;
 }
 
-#legend > div{
+.legend > div{
     width: 20px;
     height: 20px;
 }
 
-.good{
-    color: forestgreen;
+#graph-icon{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    margin: 300px 10px 0 0;
+    padding: 10px;
+    background-color: rgba(256, 256, 256, 0.8);
+    border-radius: 100px;
+    cursor: pointer;
 }
 
-.normal{
-    color: orange;
+#graph-icon:hover{
+    background-color: rgba(153, 204, 255, 0.8);
 }
 
-.bad{
-    color: red;
+#graph-icon > img{
+    width : 100%;
+}
+
+#plot-graph{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 30px 80px;
+    width: 400px;
+    height: 200px;
+}
+
+#plot{
+    height: 200px;
+}
+
+.back{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(256, 256, 256, 0.9);
+    cursor: pointer;
+}
+
+.back:hover{
+    background-color: rgba(153, 204, 255, 0.8);
+	color: white;
+}
+
+.back img{
+    padding: 13px;
+    width: 100%;
+}
+
+#current{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: 80px;
+    margin: 20px 0 0 0;
+}
+
+#current > div{
+    width: 80px;
+    height: 100%;
+    padding: 10px;
+    display: inline-block;
+    margin:0;
+    z-index: 3;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    float:left;
+    position: relative;
+}
+
+#current > #building{
+    margin-left: -80px;
+     z-index : 3;
+}
+
+#current > #floor{
+    margin-left: -80px;
+    z-index : 2;
+}
+
+#current > #room{
+    margin-left: -80px;
+    z-index : 1;
 }
