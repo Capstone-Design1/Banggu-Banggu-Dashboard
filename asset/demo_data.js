@@ -28,7 +28,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5504066',
                     'lng': '126.9430268'
@@ -39,7 +40,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.550363',
                     'lng': '126.9428003'
@@ -50,7 +52,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.550284',
                     'lng': '126.9430848'
@@ -61,7 +64,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5501469',
                     'lng': '126.9428896'
@@ -72,7 +76,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5501637',
                     'lng': '126.9429931'
@@ -83,7 +88,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5501897',
                     'lng': '126.9431219'
@@ -94,7 +100,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5502029',
                     'lng': '126.9431869'
@@ -105,7 +112,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5502226',
                     'lng': '126.9432843'
@@ -116,7 +124,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5502284',
                     'lng': '126.9433315'
@@ -127,7 +136,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5502403',
                     'lng': '126.9433949'
@@ -138,7 +148,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5502465',
                     'lng': '126.9434679'
@@ -161,7 +172,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5504215',
                     'lng': '126.9430817'
@@ -172,7 +184,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5504052',
                     'lng': '126.9429699'
@@ -183,7 +196,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5503817',
                     'lng': '126.9430974'
@@ -194,7 +208,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5503481',
                     'lng': '126.9429946'
@@ -205,7 +220,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5503399',
                     'lng': '126.9428062'
@@ -216,7 +232,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5502615',
                     'lng': '126.9431135'
@@ -227,7 +244,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5501696',
                     'lng': '126.9431218'
@@ -239,6 +257,7 @@ var json_building = {
                         humidity: 50,
                         co2: 540,
                         dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5501508',
                     'lng': '126.9430099'
@@ -249,7 +268,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 1
                     },
                     'lat': '37.5501185',
                     'lng': '126.9428696'
@@ -260,7 +280,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.5502214',
                     'lng': '126.9428829'
@@ -271,7 +292,8 @@ var json_building = {
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
-                        dust: 10
+                        dust: 10,
+                        existence: 0
                     },
                     'lat': '37.550208',
                     'lng': '126.9428087'

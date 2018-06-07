@@ -21,16 +21,6 @@ map.on('load', function () {
         data: './asset/buildings.geojson'
     });
     
-    map.addSource('J2_source', {
-        type: 'geojson',
-        data: './asset/j2.geojson'
-    });
-    
-    map.addSource('J3_source', {
-        type: 'geojson',
-        data: './asset/j3.geojson'
-    });
-    
     // Add Layers.
     map.addLayer({
         'id': 'buildings',
@@ -77,6 +67,22 @@ map.on('load', function () {
         'minzoom': 19.4,
     });
     floorLayerNames.push("J2");
+    map.addLayer({
+        'id': 'J2_existence',
+        'type': 'fill-extrusion',
+        'source': {
+            'type': 'geojson',
+            'data': './asset/j2_existence.geojson'
+        },
+        'layout': {
+            'visibility': 'none'
+        },
+       'paint': {
+            'fill-extrusion-color': '#99ccff',
+            'fill-extrusion-height': ["*", ["get", "existence"], 4]
+        },
+        'minzoom': 19.4,
+    });
 
     map.addLayer({
         'id': 'J3',
@@ -103,4 +109,20 @@ map.on('load', function () {
         'visibility': 'none'
     });
     floorLayerNames.push("J3");
+    map.addLayer({
+        'id': 'J3_existence',
+        'type': 'fill-extrusion',
+        'source': {
+            'type': 'geojson',
+            'data': './asset/j3_existence.geojson'
+        },
+        'layout': {
+            'visibility': 'none'
+        },
+       'paint': {
+            'fill-extrusion-color': '#99ccff',
+            'fill-extrusion-height': ["*", ["get", "existence"], 4]
+        },
+        'minzoom': 19.4,
+    });
 })

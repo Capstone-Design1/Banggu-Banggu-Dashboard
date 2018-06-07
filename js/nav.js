@@ -57,6 +57,7 @@ $(document).ready(function () {
         // Make visible current floor layer.
         var layerId = currentBuilding.name + currentFloor.name;
         map.setLayoutProperty(layerId, 'visibility', 'visible');
+        map.setLayoutProperty(layerId + '_existence', 'visibility', 'visible');
         
         // Fly to current building location in map.
         map.flyTo({
@@ -142,6 +143,7 @@ $(document).ready(function () {
             
             var layerId = currentBuilding.name + currentFloor.name;
             map.setLayoutProperty(layerId, 'visibility', 'none');
+            map.setLayoutProperty(layerId + '_existence', 'visibility', 'none');
             map.flyTo({
                 bearing: -14,
                 pitch: -14
@@ -194,6 +196,7 @@ function showRoomList() {
     var html = "";
     for (var i in currentFloor.rooms) {
         var li = "<li id='" + currentFloor.rooms[i].name + "'>" + currentFloor.rooms[i].name + "</li>";
+        li += "<div class='nav_existence'></div>"
         html += li;
     }
     $("#room_list").html(html);

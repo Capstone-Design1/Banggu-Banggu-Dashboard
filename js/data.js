@@ -53,10 +53,15 @@ Room.prototype.getProperty = function () {
     self.property = room.property;
     self.lat = room.lat;
     self.lng = room.lng;
+    
 }
 Room.prototype.updateColor = function () {
     this.color = returnEvaluatedColor(this.property.evaluation);
     $("#" + this.name).css("background-color", this.color);
+    
+    if( this.property.existence ){
+        $("#" + this.name + "+div").css('background-color','rgba(153, 204, 255, 1)');
+    }
 }
 
 function getObjectByName(name, objectList){

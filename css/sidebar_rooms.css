@@ -1,5 +1,5 @@
 #sidebar_rooms{
-    width: 60px;
+    width: 80px;
     height: 100%;
     padding: 10px 0;
     background-color: rgba(255, 255, 255, 0);
@@ -7,13 +7,25 @@
     padding-top: 130px;
 }
 
+#sidebar_rooms ul{
+    width: 80px;
+}
+
 #sidebar_rooms ul li{
+    float: left;
+    width: 60px;
     padding: 10px;
-    text-align: center
+    text-align: center;
 }
 
 #sidebar_rooms ul li:hover{
     background-color: #FE2E2E;
 	color: white;
     cursor: pointer;
+}
+
+.nav_existence{
+    width: 20px;
+    height: 35px;
+    float: right;
 }

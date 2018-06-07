@@ -25,6 +25,10 @@ h5{
     height: 40px;
 }
 
+#evaluation > div:hover{
+    background-color: rgba(153, 204, 255, 0.8);
+}
+
 #evaluation > div > p{
     margin: 10px 0;
     float: left;
