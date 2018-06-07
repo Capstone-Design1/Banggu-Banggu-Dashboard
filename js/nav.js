@@ -61,8 +61,13 @@ $(document).ready(function () {
         // Fly to current building location in map.
         map.flyTo({
             center: [currentBuilding.lng, currentBuilding.lat],
-            zoom: 19.5
+            zoom: 19.5,
         })
+        map.flyTo({
+            bearing: 32,
+            pitch: 50
+        });
+
 
         // Display the currentFloor information text at left top.
         $("#current > #floor").text(currentFloor.name);
@@ -99,6 +104,8 @@ $(document).ready(function () {
             center: [currentRoom.lng, currentRoom.lat],
             zoom: 21
         })
+        
+        
 
         // Display the currentRoom information text at left top.
         $("#current > #room").text(currentRoom.name[2] + currentRoom.name[3]);
@@ -135,6 +142,10 @@ $(document).ready(function () {
             
             var layerId = currentBuilding.name + currentFloor.name;
             map.setLayoutProperty(layerId, 'visibility', 'none');
+            map.flyTo({
+                bearing: -14,
+                pitch: -14
+            });
             
             currentFloor = null;
             
