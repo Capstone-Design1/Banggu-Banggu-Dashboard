@@ -67,8 +67,17 @@ Room.prototype.updateColor = function () {
 function getObjectByName(name, objectList){
     for(var i in objectList)
         if( objectList[i].name == name )
-            return objectList[i]; 
+            return objectList[i];
+    return -1;
 }
+
+function getObjectIndexByName(name, objectList){
+    for(var i in objectList)
+        if( objectList[i].name == name )
+            return i;
+    return -1;
+}
+
 function returnEvaluatedColor(evaluation){
     return colorLegend[parseInt(evaluation)];
 }

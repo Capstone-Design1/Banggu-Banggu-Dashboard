@@ -1,0 +1,19 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K501"
+      },
+      "geometry": {
+        "coordinates": [
+          126.940408,
+          37.550048
+        ],
+        "type": "Point"
+      },
+      "id": "16fdba0e32ef5724662602c3be421e05"
+    }
+  ],
+  "type": "FeatureCollection"
+}

@@ -14,19 +14,23 @@ var buildingLayerNames = [];
 var floorLayerNames = [];
 
 map.on('load', function () {
-    
+
     // Add Sources.
     map.addSource('buildings_source', {
         type: 'geojson',
         data: './asset/buildings.geojson'
     });
-    
+
     // Add Layers.
+    
+    // 1. buildings (1-depth)
+    // 1-1. polygon layer.
+    // 1-2. label layer.
+    
     map.addLayer({
         'id': 'buildings',
         'type': 'fill-extrusion',
         'source': 'buildings_source',
-        'layout': {},
         'paint': {
             'fill-extrusion-color': ["step",
                     ["get", "evaluation"],
@@ -41,8 +45,30 @@ map.on('load', function () {
         'minZoom': '3',
         'zoom': '3'
     });
+    
+    map.addLayer({
+        "id": "buildings_labels",
+        "type": "symbol",
+        'source': {
+            'type': 'geojson',
+            'data': './asset/buildings_labels.geojson'
+        },
+        "layout": {
+            "symbol-placement": "point",
+            "text-font": ["Open Sans Regular"],
+            "text-field": '{name}',
+            "text-size": 16
+        }
+    });
+
     buildingLayerNames.push("buildings");
 
+    // 2. rooms (2-depth)
+    // 2-1. room polygon layer.
+    // 2-2. existnece polygon layer.
+    // 2-3. label layer.
+    
+    // J2
     map.addLayer({
         'id': 'J2',
         'type': 'fill-extrusion',
@@ -53,7 +79,7 @@ map.on('load', function () {
         'layout': {
             'visibility': 'none'
         },
-       'paint': {
+        'paint': {
             'fill-extrusion-color': ["step",
                     ["get", "evaluation"],
                     colorStep[0][1],
@@ -66,7 +92,7 @@ map.on('load', function () {
         },
         'minzoom': 19.4,
     });
-    floorLayerNames.push("J2");
+    
     map.addLayer({
         'id': 'J2_existence',
         'type': 'fill-extrusion',
@@ -77,13 +103,30 @@ map.on('load', function () {
         'layout': {
             'visibility': 'none'
         },
-       'paint': {
+        'paint': {
             'fill-extrusion-color': '#99ccff',
             'fill-extrusion-height': ["*", ["get", "existence"], 4]
         },
         'minzoom': 19.4,
     });
+    map.addLayer({
+        "id": "J2_labels",
+        "type": "symbol",
+        'source': {
+            'type': 'geojson',
+            'data': './asset/j2_labels.geojson'
+        },
+        "layout": {
+            "symbol-placement": "point",
+            "text-font": ["Open Sans Regular"],
+            "text-field": '{name}',
+            "text-size": 16,
+            'visibility': 'none'
+        }
+    });
+    floorLayerNames.push("J2");
 
+    // J3
     map.addLayer({
         'id': 'J3',
         'type': 'fill-extrusion',
@@ -94,7 +137,7 @@ map.on('load', function () {
         'layout': {
             'visibility': 'none'
         },
-         'paint': {
+        'paint': {
             'fill-extrusion-color': ["step",
                     ["get", "evaluation"],
                     colorStep[0][1],
@@ -108,7 +151,6 @@ map.on('load', function () {
         'minzoom': 19.4,
         'visibility': 'none'
     });
-    floorLayerNames.push("J3");
     map.addLayer({
         'id': 'J3_existence',
         'type': 'fill-extrusion',
@@ -119,10 +161,84 @@ map.on('load', function () {
         'layout': {
             'visibility': 'none'
         },
-       'paint': {
+        'paint': {
             'fill-extrusion-color': '#99ccff',
             'fill-extrusion-height': ["*", ["get", "existence"], 4]
         },
         'minzoom': 19.4,
     });
+    map.addLayer({
+        "id": "J3_labels",
+        "type": "symbol",
+        'source': {
+            'type': 'geojson',
+            'data': './asset/j3_labels.geojson'
+        },
+        "layout": {
+            "symbol-placement": "point",
+            "text-font": ["Open Sans Regular"],
+            "text-field": '{name}',
+            "text-size": 16,
+            'visibility': 'none'
+        }
+    });
+    floorLayerNames.push("J3");
+    
+    // K5
+    map.addLayer({
+        'id': 'K5',
+        'type': 'fill-extrusion',
+        'source': {
+            'type': 'geojson',
+            'data': './asset/k5.geojson'
+        },
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+            'fill-extrusion-color': ["step",
+                    ["get", "evaluation"],
+                    colorStep[0][1],
+                    colorStep[1][0], colorStep[1][1],
+                    colorStep[2][0], colorStep[2][1],
+                    colorStep[3][0], colorStep[3][1],
+                    colorStep[4][0], colorStep[4][1]
+                ],
+            'fill-extrusion-height': 2
+        },
+        'minzoom': 19.4,
+        'visibility': 'none'
+    });
+    map.addLayer({
+        'id': 'K5_existence',
+        'type': 'fill-extrusion',
+        'source': {
+            'type': 'geojson',
+            'data': './asset/k5_existence.geojson'
+        },
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+            'fill-extrusion-color': '#99ccff',
+            'fill-extrusion-height': ["*", ["get", "existence"], 4]
+        },
+        'minzoom': 19.4,
+    });
+    map.addLayer({
+        "id": "K5_labels",
+        "type": "symbol",
+        'source': {
+            'type': 'geojson',
+            'data': './asset/k5_labels.geojson'
+        },
+        "layout": {
+            "symbol-placement": "point",
+            "text-font": ["Open Sans Regular"],
+            "text-field": '{name}',
+            "text-size": 16,
+            'visibility': 'none'
+        }
+    });
+    floorLayerNames.push("K5");
 })

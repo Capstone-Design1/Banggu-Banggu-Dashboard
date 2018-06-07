@@ -355,6 +355,33 @@ json_building = {
         co2: 540,
         dust: 10
     },
+    'floor': [
+        {
+            'name': '5',
+            'property': {
+                evaluation: 4.6,
+                temperature: 25.4,
+                humidity: 50,
+                co2: 540,
+                dust: 10
+            },
+            'room': [
+                {
+                    'name': 'K501',
+                    'property': {
+                        evaluation: 2.2,
+                        temperature: 25.4,
+                        humidity: 50,
+                        co2: 540,
+                        dust: 10,
+                        existence: 1
+                    },
+                    'lat': '37.5500821',
+                    'lng': '126.9403757'
+                }
+            ]
+        }
+    ],
     'lat': '37.5500994',
     'lng': '126.9400207',
 }

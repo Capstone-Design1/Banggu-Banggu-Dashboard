@@ -1,0 +1,117 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "X"
+      },
+      "geometry": {
+        "coordinates": [
+          126.943031,
+          37.551488
+        ],
+        "type": "Point"
+      },
+      "id": "076247d302191748b2d2251fc7388fb0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GN"
+      },
+      "geometry": {
+        "coordinates": [
+          126.939859,
+          37.550427
+        ],
+        "type": "Point"
+      },
+      "id": "0da8e7027f6a2fe409fdc399c1bd09a7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "J"
+      },
+      "geometry": {
+        "coordinates": [
+          126.943006,
+          37.550271
+        ],
+        "type": "Point"
+      },
+      "id": "171d5511b3e8ffe1aa6c2e788622d935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K"
+      },
+      "geometry": {
+        "coordinates": [
+          126.940037,
+          37.550053
+        ],
+        "type": "Point"
+      },
+      "id": "406f4bf634cc3db36b16fc31278d5dc6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "R"
+      },
+      "geometry": {
+        "coordinates": [
+          126.941077,
+          37.54982
+        ],
+        "type": "Point"
+      },
+      "id": "97cee6d915ad8e574602d506405349a6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "AS"
+      },
+      "geometry": {
+        "coordinates": [
+          126.941707,
+          37.549941
+        ],
+        "type": "Point"
+      },
+      "id": "b239613cff97ae68f9d55b720000e6c6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RA"
+      },
+      "geometry": {
+        "coordinates": [
+          126.942145,
+          37.550185
+        ],
+        "type": "Point"
+      },
+      "id": "c472ac0cbe5d2425c7c312af667a2583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "D"
+      },
+      "geometry": {
+        "coordinates": [
+          126.94318,
+          37.552166
+        ],
+        "type": "Point"
+      },
+      "id": "ce944aeab4aa1380d9d7c06a0219bd03"
+    }
+  ],
+  "type": "FeatureCollection"
+}

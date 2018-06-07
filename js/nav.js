@@ -15,8 +15,11 @@ $(document).ready(function () {
         var id = $(this).attr('id');
         currentBuilding = getObjectByName(id, buildings);
         
-        // Set current opacity of building from 1 to 0.3. 
+        // Set opacity of current building from 1 to 0.3. 
         map.setPaintProperty('buildings', 'fill-extrusion-opacity', 0.3);
+        
+        // Hide label of buildings.
+        map.setLayoutProperty('buildings_labels', 'visibility', 'none');
         
         // Fly to current building location in map.
         map.flyTo({
@@ -47,6 +50,9 @@ $(document).ready(function () {
             // Make invisible existing floor layer.
             var layerId = currentBuilding.name + currentFloor.name;
             map.setLayoutProperty(layerId, 'visibility', 'none');
+            map.setLayoutProperty(layerId + '_existence', 'visibility', 'none');
+            map.setLayoutProperty(layerId + '_labels', 'visibility', 'none');
+            map.setLayoutProperty('buildings_labels', 'visibility', 'none');
 
             currentRoom = null;
         }
@@ -58,6 +64,9 @@ $(document).ready(function () {
         var layerId = currentBuilding.name + currentFloor.name;
         map.setLayoutProperty(layerId, 'visibility', 'visible');
         map.setLayoutProperty(layerId + '_existence', 'visibility', 'visible');
+        map.setLayoutProperty(layerId + '_labels', 'visibility', 'visible');
+        map.setLayoutProperty('buildings_labels', 'visibility', 'none');
+
         
         // Fly to current building location in map.
         map.flyTo({
@@ -141,13 +150,15 @@ $(document).ready(function () {
             $("#sidebar_room_detail").hide();
             $("#current > #floor").animate({ "margin-left": "-=80px" }, "slow" );
             
-            var layerId = currentBuilding.name + currentFloor.name;
-            map.setLayoutProperty(layerId, 'visibility', 'none');
-            map.setLayoutProperty(layerId + '_existence', 'visibility', 'none');
             map.flyTo({
                 bearing: -14,
                 pitch: -14
             });
+            
+            var layerId = currentBuilding.name + currentFloor.name;
+            map.setLayoutProperty(layerId, 'visibility', 'none');
+            map.setLayoutProperty(layerId + '_existence', 'visibility', 'none');
+            map.setLayoutProperty(layerId + '_labels', 'visibility', 'none');
             
             currentFloor = null;
             
@@ -165,6 +176,7 @@ $(document).ready(function () {
             
             // Set opacity of building from 0.3 to 1. 
             map.setPaintProperty('buildings', 'fill-extrusion-opacity', 1);
+            map.setLayoutProperty('buildings_labels', 'visibility', 'visible');
             
             currentBuilding = null;
         }
