@@ -8,6 +8,7 @@ function init() {
     $("#sidebar_rooms").hide();
     $("#sidebar_room_detail").hide();
     $("#plot-graph").hide();
+    $("#realtime-chart").hide();
     $("#legend").append(returnLegend());
 
     showBuildingList();
