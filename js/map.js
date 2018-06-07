@@ -185,13 +185,15 @@ map.on('load', function () {
     floorLayerNames.push("J3");
     
     // K5
+    var url = 'http://ec2-13-209-35-182.ap-northeast-2.compute.amazonaws.com:8000/api/k/5';
+    window.setInterval(function() {
+        map.getSource('K5_src').setData(url);
+    }, 2000);
+    map.addSource('K5_src', { type: 'geojson', data: url });
     map.addLayer({
         'id': 'K5',
         'type': 'fill-extrusion',
-        'source': {
-            'type': 'geojson',
-            'data': './asset/k5.geojson'
-        },
+        'source': 'k5_src',
         'layout': {
             'visibility': 'none'
         },
