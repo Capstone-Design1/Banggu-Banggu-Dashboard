@@ -141,24 +141,25 @@ $(document).ready(function () {
 
         var id = $(this).attr("id");
 
-        if (id == "score")
-            return;
-        
-        if (id == "temperature") {
+        if (id == "score"){
             
-            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/510610/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
+            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/514352/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&title=Environment+Score&type=line&xaxis=time&yaxis=+" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
+        
+        }else if (id == "temperature") {
+            
+            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/514352/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&title=Temperature&type=line&xaxis=time&yaxis=%E2%84%83" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
         
         }else if( id == "humidty" ){
             
-            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/506554/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
+            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/514352/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&title=Humidity&type=line&xaxis=time&yaxis=%25" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
             
         }else if( id == "co2" ){
             
-            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/510610/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
+            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/514352/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&title=Co2&type=line&xaxis=time&yaxis=ppm" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
             
         }else if( id == "dust" ){
             
-            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/506554/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
+            var html = '<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/514352/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&title=Dust&type=line&xaxis=time&yaxis=%E3%8E%8D%2F%E3%8E%A5" scrolling="no" frameborder="0 allowtransparency="true";"></iframe>';
             
         }
         $("#realtime-chart").html(html);
