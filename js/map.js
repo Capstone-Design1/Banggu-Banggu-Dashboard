@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
     center: [126.941667, 37.550901],
     zoom: 17.11,
     bearing: -13.6,
-    hash: true
+    hash: false
 });
 
 // Variables saving each layer name.
