@@ -14,7 +14,7 @@ var json_building = {
         {
             'name': '3',
             'property': {
-                evaluation: 4.6,
+                evaluation: 2.8,
                 temperature: 25.4,
                 humidity: 50,
                 co2: 540,
@@ -24,7 +24,7 @@ var json_building = {
                 {
                     'name': 'J301',
                     'property': {
-                        evaluation: 2.2,
+                        evaluation: 0.8,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -36,7 +36,7 @@ var json_building = {
                 }, {
                     'name': 'J302',
                     'property': {
-                        evaluation: 3.7,
+                        evaluation: 1.2,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -48,7 +48,7 @@ var json_building = {
                 }, {
                     'name': 'J303',
                     'property': {
-                        evaluation: 3,
+                        evaluation: 2.8,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -60,7 +60,7 @@ var json_building = {
                 }, {
                     'name': 'J304',
                     'property': {
-                        evaluation: 2.5,
+                        evaluation: 2.9,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -72,7 +72,7 @@ var json_building = {
                 }, {
                     'name': 'J305',
                     'property': {
-                        evaluation: 1.6,
+                        evaluation: 3.6,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -84,7 +84,7 @@ var json_building = {
                 }, {
                     'name': 'J306',
                     'property': {
-                        evaluation: 2,
+                        evaluation: 4.1,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -108,7 +108,7 @@ var json_building = {
                 }, {
                     'name': 'J308',
                     'property': {
-                        evaluation: 3.1,
+                        evaluation: 3.9,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -120,7 +120,7 @@ var json_building = {
                 }, {
                     'name': 'J309',
                     'property': {
-                        evaluation: 0.6,
+                        evaluation: 4.2,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -132,7 +132,7 @@ var json_building = {
                 },{
                     'name': 'J310',
                     'property': {
-                        evaluation: 0.2,
+                        evaluation: 2.7,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -168,10 +168,10 @@ var json_building = {
                 {
                     'name': 'J201',
                     'property': {
-                        evaluation: 3.7,
-                        temperature: 25.4,
-                        humidity: 50,
-                        co2: 540,
+                        evaluation: 1.2,
+                        temperature: 28.4,
+                        humidity: 30,
+                        co2: 1000,
                         dust: 10,
                         existence: 0
                     },
@@ -180,11 +180,11 @@ var json_building = {
                 }, {
                     'name': 'J202',
                     'property': {
-                        evaluation: 3,
-                        temperature: 25.4,
+                        evaluation: 1.4,
+                        temperature: 26.4,
                         humidity: 50,
-                        co2: 540,
-                        dust: 10,
+                        co2: 1200,
+                        dust: 40,
                         existence: 1
                     },
                     'lat': '37.5504052',
@@ -192,10 +192,10 @@ var json_building = {
                 }, {
                     'name': 'J203',
                     'property': {
-                        evaluation: 2.8,
-                        temperature: 25.4,
-                        humidity: 50,
-                        co2: 540,
+                        evaluation: 1.3,
+                        temperature: 27.4,
+                        humidity: 20,
+                        co2: 1200,
                         dust: 10,
                         existence: 0
                     },
@@ -204,7 +204,7 @@ var json_building = {
                 }, {
                     'name': 'J204',
                     'property': {
-                        evaluation: 4.1,
+                        evaluation: 2.3,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -228,7 +228,7 @@ var json_building = {
                 }, {
                     'name': 'J206',
                     'property': {
-                        evaluation: 3.1,
+                        evaluation: 3.8,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -240,7 +240,7 @@ var json_building = {
                 }, {
                     'name': 'J207',
                     'property': {
-                        evaluation: 3.6,
+                        evaluation: 4.3,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -252,7 +252,7 @@ var json_building = {
                 }, {
                     'name': 'J208',
                     'property': {
-                        evaluation: 4.1,
+                        evaluation: 4.2,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,
@@ -264,7 +264,7 @@ var json_building = {
                 }, {
                     'name': 'J209',
                     'property': {
-                        evaluation: 4.5,
+                        evaluation: 4.6,
                         temperature: 25.4,
                         humidity: 50,
                         co2: 540,

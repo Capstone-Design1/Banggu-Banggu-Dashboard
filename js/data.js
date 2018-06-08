@@ -78,6 +78,15 @@ function getObjectIndexByName(name, objectList){
     return -1;
 }
 
+function setObjectPropertyByName(name, objectList, property){
+    for(var i in objectList)
+        if( objectList[i].name == name ){
+            objectList[i].property = property;
+            return 1;
+        }
+    return -1;
+}
+
 function returnEvaluatedColor(evaluation){
     return colorLegend[parseInt(evaluation)];
 }

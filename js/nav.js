@@ -323,13 +323,13 @@ function showRoomDetail() {
 }
 
 function returnEvaluatedTemp(temperature) {
-    if (21 < temperature <= 23)
+    if (21 < temperature && temperature <= 23)
         return 5;
-    else if (23 < temperature <= 25 || 19 < temperature <= 21)
+    else if ((23 < temperature && temperature <= 25) || (19 < temperature && temperature <= 21))
         return 4;
-    else if (25 <= temperature < 27 || 17 <= temperature < 19)
+    else if ((25 <= temperature && temperature < 27) || (17 <= temperature && temperature  < 19))
         return 3;
-    else if (27 <= temperature < 29 || 15 <= temperature < 17)
+    else if ((27 <= temperature && temperature < 29) || (15 <= temperature && temperature < 17))
         return 2;
     else {
         return 1;
@@ -337,13 +337,13 @@ function returnEvaluatedTemp(temperature) {
 }
 
 function returnEvaluatedHum(humidity) {
-    if (50 < humidity <= 60)
+    if (50 < humidity && humidity <= 60)
         return 5;
-    else if (60 < humidity <= 70 || 40 < humidity <= 50)
+    else if ((60 < humidity && humidity <= 70) || (40 < humidity && humidity <= 50))
         return 4;
-    else if (70 <= humidity < 80 || 30 <= humidity < 40)
+    else if ((70 <= humidity && humidity < 80) || (30 <= humidity && humidity < 40))
         return 3;
-    else if (80 <= humidity < 90 || 20 <= humidity < 30)
+    else if ((80 <= humidity && humidity < 90) || (20 <= humidity && humidity < 30))
         return 2;
     else {
         return 1;

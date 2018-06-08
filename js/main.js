@@ -88,13 +88,3 @@ function updateJsonData_rooms() {
         
     });
 }
-
-function setObjectPropertyByName(name, objectList, property){
-    for(var i in objectList)
-        if( objectList[i].name == name ){
-            objectList[i].property = property;
-            return 1;
-        }
-    return -1;
-}
-

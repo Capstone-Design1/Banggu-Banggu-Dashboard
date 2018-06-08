@@ -4,7 +4,7 @@
       "type": "Feature",
       "properties": {
         "name": "J302",
-        "evaluation": 3.7,
+        "evaluation": 1.2,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -43,7 +43,7 @@
       "type": "Feature",
       "properties": {
         "name": "J310",
-        "evaluation": 0.2,
+        "evaluation": 2.7,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -82,7 +82,7 @@
       "type": "Feature",
       "properties": {
         "name": "J301",
-        "evaluation": 2.2,
+        "evaluation": 0.8,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -121,7 +121,7 @@
       "type": "Feature",
       "properties": {
         "name": "J304",
-        "evaluation": 2.5,
+        "evaluation": 2.9,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -199,7 +199,7 @@
       "type": "Feature",
       "properties": {
         "name": "J303",
-        "evaluation": 3,
+        "evaluation": 2.8,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -238,7 +238,7 @@
       "type": "Feature",
       "properties": {
         "name": "J305",
-        "evaluation": 1.6,
+        "evaluation": 3.6,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -277,7 +277,7 @@
       "type": "Feature",
       "properties": {
         "name": "J306",
-        "evaluation": 2,
+        "evaluation": 4.1,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -316,7 +316,7 @@
       "type": "Feature",
       "properties": {
         "name": "J309",
-        "evaluation": 0.6,
+        "evaluation": 4.2,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,
@@ -355,7 +355,7 @@
       "type": "Feature",
       "properties": {
         "name": "J308",
-        "evaluation": 3.1,
+        "evaluation": 3.9,
         "temperature": 25.4,
         "humidity": 50,
         "co2": 540,

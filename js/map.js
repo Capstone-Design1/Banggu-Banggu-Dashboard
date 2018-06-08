@@ -193,7 +193,7 @@ map.on('load', function () {
     map.addLayer({
         'id': 'K5',
         'type': 'fill-extrusion',
-        'source': 'k5_src',
+        'source': 'K5_src',
         'layout': {
             'visibility': 'none'
         },
