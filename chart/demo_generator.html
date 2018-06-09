@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var evaluation,
+            temperature,
+            humidity,
+            co2,
+            dust,
+            url;
+        
+        setInterval(function() {
+            temperature = Math.floor(Math.random() * 2) + 24;
+            humidity = Math.floor(Math.random() * 3) + 40;
+            co2 = Math.floor(Math.random() * 50) + 800;
+            dust = Math.floor(Math.random() * 1) + 2;
+            evaluation = Math.floor(Math.random() * 4) + 1;
+            console.log(temperature, humidity, co2, dust, evaluation);
+            
+            url = "https://api.thingspeak.com/update?api_key=FZRLW6ZYFYGSPQZM&field1=" + temperature + "&field2=" + humidity +"&field3=" + dust +"&field4=" + co2 + "&field5=" + evaluation;
+            $.ajax({
+                type: "GET",
+                url: url,
+            })
+            .done(function(msg) {
+                console.log("SUCCESS: ");
+            })
+        }, 3000);
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>
